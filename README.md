@@ -23,3 +23,5 @@ Today from home im going to do a scketch about my GUI (app) in paper and then I'
 
 4rd Day:
 Today I decided not use Java for do my interface, so in the weekend I've learn how to do a nice interface in python, so I learn PySimpleGUI. It's very easy to use it and gives very cool results.
+
+https://www.pysimplegui.org/en/latest/
