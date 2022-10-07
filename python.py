@@ -4,16 +4,16 @@ import PySimpleGUI as sg
 from sys import argv
 from PySimpleGUI import popup
 
-def download(link, site):
+def download(link):
     a = [link]
 
     my_link = a[0]
-    yt = YouTube(link)
+    yt = YouTube(my_link)
 
     yd = yt.streams.get_highest_resolution()
 # r'C:\Users\migue\Desktop\test'
-    yd.download(f"r{site}")
-sg.theme('DarkAmber')
+    yd.download(r'C:\Users\migue\Desktop\test')
+sg.theme('DarkBlue')
 layout = [[sg.Text("Enter your Url")],
           [sg.InputText(), sg.Button("Download")]]
 
@@ -23,11 +23,11 @@ while True:
     event, values = win.read()
     if event == 'Download':
         if values[0] != NULL:
-            
             lik = values[0]
-            file = sg.popup_get_folder
-            download(lik, file)
-    elif event == sg.WIN_CLOSED: # if user closes window or clicks cancel
+#            file = sg.popup_get_file("Save", save_as=True, no_window=True)
+            sg.popup_menu
+            download(lik)
+    elif event == sg.WIN_CLOSED:
         break
 
 win.close()
