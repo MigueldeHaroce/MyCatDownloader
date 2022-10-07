@@ -20,3 +20,6 @@ https://www.apache.org/
 3rd Day:
 
 Today from home im going to do a scketch about my GUI (app) in paper and then I'm going to do it in Java with Apache Netbeans. Well, after like 6 hours full coding I finally finished my interface writed in Java, I couldn't do to much in Apache Netbeans so i wrote like 100 line of pure code and also learn. I'm going to rest and tomorrow I think I can finish the Pi in 4 days!! Only I have to merge the two programs and decorate more the gui. And that's it. 
+
+4rd Day:
+Today I decided not use Java for do my interface, so in the weekend I've learn how to do a nice interface in python, so I learn PySimpleGUI. It's very easy to use it and gives very cool results.
