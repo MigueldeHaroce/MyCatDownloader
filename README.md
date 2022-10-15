@@ -25,3 +25,25 @@ Today from home im going to do a scketch about my GUI (app) in paper and then I'
 Today I decided not use Java for do my interface, so in the weekend I've learn how to do a nice interface in python, so I learn PySimpleGUI. It's very easy to use it and gives very cool results.
 
 https://www.pysimplegui.org/en/latest/
+
+5st Day:
+
+Today I've realize that the PySimpleGUI is not enought good for doing the interface so I'm going to use Qt, a cool program for do interfaces, it's was been used for Adobe's programs or AutoCad... 
+
+https://www.qt.io/
+
+6st Day:
+
+Today in the Saturday I'm going to learn how to use Qt program for doing the interface, because it's really difficult. And really heavy the program, occupies me like 2Tb!! 
+
+6st Day at 2am:
+
+I've started doing the interface, I'm going to use th Qt program and some other libraries for doing the app dynamic.
+
+7st day:
+
+Today I'm going to working more in the interface and implementing Python + Pyside
+
+8st Day:
+
+Today in the morning of Saturday I'm going to prepare my Linux OS and finish the interface.
