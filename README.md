@@ -47,3 +47,8 @@ Today I'm going to working more in the interface and implementing Python + Pysid
 8st Day:
 
 Today in the morning of Saturday I'm going to prepare my Linux OS and finish the interface.
+
+A lot of days later:
+
+With these days I learned a lot about how code the interface, I learn animations, pop ups, path routes, formats... So I finished a lot my interface, it's actually
+applied the animations, disign, functions. Only I have to finish the details and do the .exe file. Later I'm going to upload the folder containing the app.
