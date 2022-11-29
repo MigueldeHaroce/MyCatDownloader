@@ -1,27 +1,30 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interfacefHnQhL.ui'
+## Form generated from reading UI file 'interfaceGfsEuy.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.15.2
+## Created by: Qt User Interface Compiler version 5.14.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide2.QtCore import *
-from PySide2.QtGui import *
+from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
+    QRect, QSize, QUrl, Qt)
+from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
+    QFontDatabase, QIcon, QLinearGradient, QPalette, QPainter, QPixmap,
+    QRadialGradient)
 from PySide2.QtWidgets import *
 
-from Custom_Widgets.Widgets import QCustomSlideMenu
 from Custom_Widgets.Widgets import QCustomStackedWidget
+from Custom_Widgets.Widgets import QCustomSlideMenu
 
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        if not MainWindow.objectName():
+        if MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.setEnabled(True)
-        MainWindow.resize(726, 584)
+        MainWindow.resize(824, 602)
         sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -103,6 +106,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.setContentsMargins(0, 10, 0, 0)
         self.menuBtn = QPushButton(self.frame_2)
         self.menuBtn.setObjectName(u"menuBtn")
+        self.menuBtn.setCursor(QCursor(Qt.PointingHandCursor))
         self.menuBtn.setStyleSheet(u"background-color: rgb(22, 25, 29);")
         icon = QIcon()
         icon.addFile(u"logois/menu.svg", QSize(), QIcon.Normal, QIcon.Off)
@@ -156,7 +160,6 @@ class Ui_MainWindow(object):
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush3)
 #endif
-
         palette.setBrush(QPalette.Disabled, QPalette.WindowText, brush)
         palette.setBrush(QPalette.Disabled, QPalette.Button, brush1)
         palette.setBrush(QPalette.Disabled, QPalette.Text, brush)
@@ -169,6 +172,7 @@ class Ui_MainWindow(object):
         palette.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush4)
 #endif
         self.homeBtn.setPalette(palette)
+        self.homeBtn.setCursor(QCursor(Qt.PointingHandCursor))
         self.homeBtn.setStyleSheet(u"font: 8pt \"Franklin Gothic Medium\";\n"
 "color: rgb(255, 255, 255);background-color:#1f232a;")
         icon1 = QIcon()
@@ -229,6 +233,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(50)
         self.ytBtn.setFont(font)
+        self.ytBtn.setCursor(QCursor(Qt.PointingHandCursor))
         self.ytBtn.setStyleSheet(u"font: 8pt \"Franklin Gothic Medium\";\n"
 "color: rgb(255, 255, 255);")
         icon2 = QIcon()
@@ -240,6 +245,7 @@ class Ui_MainWindow(object):
 
         self.vidBtn = QPushButton(self.frame)
         self.vidBtn.setObjectName(u"vidBtn")
+        self.vidBtn.setCursor(QCursor(Qt.PointingHandCursor))
         self.vidBtn.setStyleSheet(u"font: 8pt \"Franklin Gothic Medium\";\n"
 "color: rgb(255, 255, 255);")
         icon3 = QIcon()
@@ -251,6 +257,7 @@ class Ui_MainWindow(object):
 
         self.musBtn = QPushButton(self.frame)
         self.musBtn.setObjectName(u"musBtn")
+        self.musBtn.setCursor(QCursor(Qt.PointingHandCursor))
         self.musBtn.setStyleSheet(u"font: 8pt \"Franklin Gothic Medium\";\n"
 "color: rgb(255, 255, 255);")
         icon4 = QIcon()
@@ -277,6 +284,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.setContentsMargins(0, 10, 0, 10)
         self.HelpBtn = QPushButton(self.frame_3)
         self.HelpBtn.setObjectName(u"HelpBtn")
+        self.HelpBtn.setCursor(QCursor(Qt.PointingHandCursor))
         self.HelpBtn.setStyleSheet(u"font: 8pt \"Franklin Gothic Medium\";\n"
 "color: rgb(255, 255, 255);")
         icon5 = QIcon()
@@ -288,6 +296,7 @@ class Ui_MainWindow(object):
 
         self.InfoBtn = QPushButton(self.frame_3)
         self.InfoBtn.setObjectName(u"InfoBtn")
+        self.InfoBtn.setCursor(QCursor(Qt.PointingHandCursor))
         self.InfoBtn.setStyleSheet(u"font: 8pt \"Franklin Gothic Medium\";\n"
 "color: rgb(255, 255, 255);")
         icon6 = QIcon()
@@ -348,6 +357,7 @@ class Ui_MainWindow(object):
 
         self.closeMenuBtn = QPushButton(self.frame_4)
         self.closeMenuBtn.setObjectName(u"closeMenuBtn")
+        self.closeMenuBtn.setCursor(QCursor(Qt.PointingHandCursor))
         icon7 = QIcon()
         icon7.addFile(u"logois/x-circle.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.closeMenuBtn.setIcon(icon7)
@@ -531,6 +541,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
         self.minusBtn = QPushButton(self.frame_6)
         self.minusBtn.setObjectName(u"minusBtn")
+        self.minusBtn.setCursor(QCursor(Qt.PointingHandCursor))
         icon8 = QIcon()
         icon8.addFile(u"logois/minus.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.minusBtn.setIcon(icon8)
@@ -539,6 +550,7 @@ class Ui_MainWindow(object):
 
         self.restoreBtn = QPushButton(self.frame_6)
         self.restoreBtn.setObjectName(u"restoreBtn")
+        self.restoreBtn.setCursor(QCursor(Qt.PointingHandCursor))
         icon9 = QIcon()
         icon9.addFile(u"logois/square.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.restoreBtn.setIcon(icon9)
@@ -547,6 +559,7 @@ class Ui_MainWindow(object):
 
         self.exitBtn = QPushButton(self.frame_6)
         self.exitBtn.setObjectName(u"exitBtn")
+        self.exitBtn.setCursor(QCursor(Qt.PointingHandCursor))
         icon10 = QIcon()
         icon10.addFile(u"logois/x.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.exitBtn.setIcon(icon10)
@@ -633,6 +646,7 @@ class Ui_MainWindow(object):
 
         self.pushButton_4 = QPushButton(self.widget_11)
         self.pushButton_4.setObjectName(u"pushButton_4")
+        self.pushButton_4.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_4.setLayoutDirection(Qt.RightToLeft)
         self.pushButton_4.setAutoFillBackground(False)
         self.pushButton_4.setStyleSheet(u"color:rgb(255, 255, 255);")
@@ -708,21 +722,7 @@ class Ui_MainWindow(object):
         self.label_7.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.label_7.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
 
-        self.verticalLayout_21.addWidget(self.label_7, 0, Qt.AlignHCenter)
-
-        self.fileContainer = QWidget(self.widget_14)
-        self.fileContainer.setObjectName(u"fileContainer")
-        sizePolicy4.setHeightForWidth(self.fileContainer.sizePolicy().hasHeightForWidth())
-        self.fileContainer.setSizePolicy(sizePolicy4)
-        self.fileContainer.setStyleSheet(u"")
-        self.verticalLayout_22 = QVBoxLayout(self.fileContainer)
-        self.verticalLayout_22.setObjectName(u"verticalLayout_22")
-
-
-        #self.verticalLayout_22.addWidget(self.label_17)
-
-
-        self.verticalLayout_21.addWidget(self.fileContainer)
+        self.verticalLayout_21.addWidget(self.label_7, 0, Qt.AlignHCenter|Qt.AlignTop)
 
 
         self.verticalLayout_13.addWidget(self.widget_14)
@@ -775,6 +775,7 @@ class Ui_MainWindow(object):
 
         self.pushButton_2 = QPushButton(self.widget_5)
         self.pushButton_2.setObjectName(u"pushButton_2")
+        self.pushButton_2.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_2.setLayoutDirection(Qt.RightToLeft)
         self.pushButton_2.setAutoFillBackground(False)
         self.pushButton_2.setStyleSheet(u"color:rgb(255, 255, 255);")
@@ -852,12 +853,12 @@ class Ui_MainWindow(object):
 
         self.label_5 = QLabel(self.widget_10)
         self.label_5.setObjectName(u"label_5")
-        font9 = QFont()
-        font9.setFamily(u"Corbel")
-        font9.setPointSize(30)
-        font9.setBold(True)
-        font9.setWeight(75)
-        self.label_5.setFont(font9)
+        font8 = QFont()
+        font8.setFamily(u"Corbel")
+        font8.setPointSize(30)
+        font8.setBold(True)
+        font8.setWeight(75)
+        self.label_5.setFont(font8)
         self.label_5.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "\n"
 "")
@@ -892,10 +893,10 @@ class Ui_MainWindow(object):
         self.horizontalLayout_7.setContentsMargins(9, 0, 0, 0)
         self.label_9 = QLabel(self.foot)
         self.label_9.setObjectName(u"label_9")
-        font10 = QFont()
-        font10.setBold(True)
-        font10.setWeight(75)
-        self.label_9.setFont(font10)
+        font9 = QFont()
+        font9.setBold(True)
+        font9.setWeight(75)
+        self.label_9.setFont(font9)
         self.label_9.setStyleSheet(u"color: rgb(255, 255, 255);")
 
         self.horizontalLayout_7.addWidget(self.label_9)
@@ -918,12 +919,10 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.mainBodyContainer)
 
         MainWindow.setCentralWidget(self.centralwidget)
-        self.name7 = "Hi"
-        self.name8 = "hello"
 
         self.retranslateUi(MainWindow)
 
-        self.centerMenuPages.setCurrentIndex(1)
+        self.centerMenuPages.setCurrentIndex(0)
         self.mainPages.setCurrentIndex(1)
 
 
