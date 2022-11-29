@@ -59,16 +59,15 @@ class MainWindow(QMainWindow):
         font8.setPointSize(12)
         self.ui.label_17.setFont(font8)
         self.ui.label_17.setStyleSheet(u"border: 2px dashed #fff;\n"
-                                    "color: rgb(255, 255, 255);")
+                                    "color: rgb(255, 255, 255);\n"
+                                    "background-color: #2c313c\n"
+        )
         self.ui.label_17.setAlignment(Qt.AlignCenter)
         self.ui.label_17.setText(QCoreApplication.translate("MainWindow", u"Drag your File Here!", None))
-        
-        a = self
-
-
-
-
-        self.ui.verticalLayout_22.addWidget(self.ui.label_17)
+        self.ui.label_17.setSizePolicy(
+            QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding
+        )
+        self.ui.verticalLayout_21.addWidget(self.ui.label_17)
 
 
 
