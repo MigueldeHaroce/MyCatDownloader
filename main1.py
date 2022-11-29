@@ -145,7 +145,7 @@ class MainWindow1(QMainWindow):
                 self.ui.checkBox_18.setChecked(False)
                 self.ui.checkBox_19.setChecked(False)
                 self.ui.checkBox_20.setChecked(False) 
-                self.format = ".webp"
+                self.format = ".webm"
             # if third check box is selected
             elif self.sender() == self.ui.checkBox_5:
   
@@ -364,7 +364,7 @@ class MainWindow1(QMainWindow):
     def passInfo(self):
         my_path = my_path_to_pass
         detect(my_path, self.format)
-        sys.exit(app.exec_())
+
 
         
     def showTime(self):

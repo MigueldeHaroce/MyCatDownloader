@@ -5,7 +5,7 @@ def detect(myPath, myOutput):
     formats = [".mp4",
                ".avi",
                ".mkv",
-               ".webp",
+               ".webm",
                ".mov",
                ".png",
                ".jpg",
@@ -34,15 +34,22 @@ def convert(name, myPath, myInput, output):
     pathOnly = myPath[:-formatsDict]
     print(nameOnly)
     
-    if myInput == ".mp4" or myInput == ".avi" or myInput == ".mkv" or myInput == ".webp" or myInput == ".mov":
-        if output == ".mp4" or output == ".avi" or output == ".mkv" or output == ".webp" or output == ".mov":
+    if myInput == ".mp4" or myInput == ".avi" or myInput == ".mkv" or myInput == ".webm" or myInput == ".mov":
+        if output == ".mp4" or output == ".avi" or output == ".mkv" or output == ".mov":
+            if output != ".webp":
+                if myInput != output:
+                    clip = moviepy.VideoFileClip(r"" + myPath)
+                    result = moviepy.CompositeVideoClip([clip])
+                    result.write_videofile(pathOnly + output, codec='mpeg4')
+                else:
+                    # TODO POPUP
+                    print("idk")
+        elif output == ".webm":
             if myInput != output:
                 clip = moviepy.VideoFileClip(r"" + myPath)
                 result = moviepy.CompositeVideoClip([clip])
-                result.write_videofile(pathOnly + output, codec='mpeg4')
-            else:
-                # TODO POPUP
-                print("idk")
+                result.write_videofile(pathOnly + output, codec='libvpx')
+
     elif myInput == ".png" or myInput == ".jpg" or myInput == ".jpeg" or myInput == ".webp" or myInput == ".tiff":
         if output == ".png" or output == ".jpg" or output == ".jpeg" or output == ".webp" or output == ".tiff":
             if myInput != output:
