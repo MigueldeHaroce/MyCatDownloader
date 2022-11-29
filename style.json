@@ -1,0 +1,123 @@
+{
+	"QMainWindow":[
+		{
+			"tittle":"My-Cat-Downloader",
+			"icon":"unnamed.png",
+			"frameless": true,
+			"transluscentBg": true,
+			"sizeGrip": "sizeGrip",
+			"navigation":[
+				{
+					"minimize":"minusBtn",
+					"close": "exitBtn",
+					"restore":[
+						{
+							"buttonName": "restoreBtn",
+							"normalIcon": "logois/square.svg",
+							"maximizedIcon": "logois/copy.svg"
+						}
+					],
+					"moveWindow": "headerContainer",
+					"tittleBar": "headerContainer"
+				}
+			]
+		}
+	],
+	"QCustomSlideMenu": [
+		{
+			"name": "leftMenuContainer",
+			"defaultSize": [{
+				"width": 45,
+				"height": "parent"
+			}],
+			"collapsedSize": [{
+				"width": 45,
+				"height": "parent"
+			}],
+			"expandedSize": [{
+				"width": 150,
+				"height": "parent"
+			}],
+			"toggleButton": [{
+				"buttonName": "menuBtn",
+				"icons": [{
+					"whenMenuIsCollapsed": "logois/menu.svg",
+					"whenMenuIsExpanded": "logois/chevron-left.svg"
+				}]
+			}],
+			"menuTransitionAnimation": [{
+				"animationDuration": 500,
+				"animationEasingCurve": "Linear"
+			}]
+		},
+		{
+			"name": "centerMenuContainer",
+			"defaultSize": [{
+					"width": 0,
+					"height": "parent"
+			}],
+			"collapsedSize": [{
+					"width": 0,
+					"height": "parent"
+			}],
+			"expandedSize": [{
+					"width": 200,
+					"height": "parent"
+			}],
+			"menuTransitionAnimation": [{
+					"animationDuration": 500,
+					"animationEasingCurve": "Linear"
+			}]
+		}
+	],
+	"QStackedWidget":[
+		{
+			"name":"mainPages",
+			"navigation":[
+				{
+					"navigationButtons":[
+						{
+							"homeBtn": "page_3",
+							"ytBtn": "page_4",
+							"vidBtn": "page_7",
+							"musBtn": "page_8"
+
+						}
+					]
+				}
+			]
+
+		},
+		{
+			"name":"centerMenuPages",
+			"navigation":[
+				{
+					"navigationButtons":[
+						{
+							"InfoBtn": "page_2",
+							"HelpBtn": "page"
+
+						}
+					]
+				}
+			]
+
+		}
+	],
+		"QPushButtonGroup": [
+			{
+				"Buttons": [
+					"homeBtn",
+					"ytBtn",
+					"musBtn",
+					"vidBtn"
+				],
+				"Style":[
+				{
+					"Active": "background-color: #1f232a; color: rgb(255, 255, 255);",
+					"NotActive": "color: rgb(255, 255, 255);"
+				}
+			]
+		}
+	]
+}

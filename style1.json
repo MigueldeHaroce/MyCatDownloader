@@ -1,0 +1,55 @@
+{
+	"QMainWindow":[
+		{
+			"tittle":"My-Cat-Downloader",
+			"icon":"unnamed.png",
+			"frameless": true,
+			"transluscentBg": true,
+			"navigation":[
+				{
+					"minimize":"minusBtn",
+					"close": "exitBtn",
+					"moveWindow": "topContainer",
+					"tittleBar": "topContainer"
+				}
+			]
+		}
+	],
+		"QStackedWidget":[
+		{
+			"name":"stackedWidget_2",
+			"navigation":[
+				{
+					"navigationButtons":[
+						{
+							"homeBtn": "homePage",
+							"vidBtn": "vidPage",
+							"imgBtn": "imgPage",
+							"musBtn": "audPage"
+
+						}
+					]
+				}
+			]
+
+		}
+	],
+			"QPushButtonGroup": [
+			{
+				"Buttons": [
+					"homeBtn",
+					"vidBtn",
+					"imgBtn",
+					"musBtn",
+					"infoBtn"
+				],
+				"Style":[
+				{
+					"Active": "background-color: #1f232a; color: rgb(255, 255, 255);",
+					"NotActive": "color: rgb(255, 255, 255);"
+				}
+			]
+			
+		}
+	]
+}
