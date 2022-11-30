@@ -14,15 +14,15 @@ def downloadYtVid(lik, dir):
 
 def downloadYtAudio(lik, dir):
     a = [lik]
-    
+
     link = a[0]
     yt = YouTube(link)
 
     video = yt.streams.filter(only_audio=True).first()
 
-    out_file = video.download(output_path=str(dir)) # type: ignore
+    out_file = video.download(output_path=dir) # type: ignore
 
-    base, ext = os.path.splitext(dir)
+    base, ext = os.path.splitext(out_file)
     new_file = base + '.mp3'
     os.rename(out_file, new_file)
 

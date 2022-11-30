@@ -36,6 +36,8 @@ class MainWindow1(QMainWindow):
         ########################################################################
         self.format = None
         self.ui.pushButton_5.clicked.connect(self.passInfo)
+        self.ui.pushButton_9.clicked.connect(self.passInfo)
+        self.ui.pushButton_8.clicked.connect(self.passInfo)
         
         self.ui.checkBox.stateChanged.connect(self.uncheck)
         self.ui.checkBox_2.stateChanged.connect(self.uncheck)

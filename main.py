@@ -119,7 +119,7 @@ class MainWindow(QMainWindow):
         print('connected' if validation else 'no internet!')
         if validation:
             try:
-                threading.Thread(target=downloadYtVid, args=(response,))
+                downloadYtVid(text, response)
                 msg = QMessageBox()
                 msg.setWindowTitle("Alert")
                 msg.setText("Your video is downloaded!")

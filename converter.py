@@ -4,6 +4,13 @@ import moviepy.editor as moviepy
 from PySide2.QtWidgets import QMessageBox
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
+from PIL import Image
+from os import path
+from pydub import AudioSegment
+import re
+import subprocess
+
+
 
 def detect(myPath, myOutput):
     formats = [".mp4",
@@ -37,7 +44,10 @@ def convert(name, myPath, myInput, output):
     print(formatsDict)
     nameOnly = name[:formatsDict]
     pathOnly = myPath[:-formatsDict]
-    print(nameOnly)
+    formatOnly = re.sub(r'.', '', output, count = 1)
+    print(pathOnly)
+    print(nameOnly, formatOnly)
+    print(myPath)
 
     if myInput == ".mp4" or myInput == ".avi" or myInput == ".mkv" or myInput == ".webm" or myInput == ".mov":
         if output == ".mp4" or output == ".avi" or output == ".mkv" or output == ".mov":
@@ -54,7 +64,8 @@ def convert(name, myPath, myInput, output):
                     #sys.exit(msg.exec_())
                 else:
                     # TODO POPUP
-                    threading.Thread(target=call_warn_popup).start()
+                    print("NO VALID")
+                    # threading.Thread(target=call_warn_popup).start()
 
         elif output == ".webm":
             if myInput != output:
@@ -62,22 +73,31 @@ def convert(name, myPath, myInput, output):
                 result = moviepy.CompositeVideoClip([clip])
                 result.write_videofile(pathOnly + output, codec='libvpx')
         else:
-            pass
+
+            print("NO VALID")
             #threading.Thread(target=call_warn_popup).start()
 
     elif myInput == ".png" or myInput == ".jpg" or myInput == ".jpeg" or myInput == ".webp" or myInput == ".tiff":
         if output == ".png" or output == ".jpg" or output == ".jpeg" or output == ".webp" or output == ".tiff":
             if myInput != output:
-                pass
-                # TODO
-            # TODO
-        # TODO
+                im1 = Image.open(myPath)
+                im1.save(f"{pathOnly}{output}")
+            else:
+                print("NO VALID")
+        else:
+            print("NO VALID")
     elif myInput == ".mp3" or myInput == ".wac" or myInput == ".acc" or myInput == ".flac" or myInput == ".aiff":
         if output == ".mp3" or output == ".wac" or output == ".acc" or output == ".flac" or output == ".aiff":
             if myInput != output:
+                # TODO
                 pass
-            # TODO
-        # TODO
+
+            else:
+                print("NO VALID")
+        else:
+            print("NO VALID")
+    else:
+        print("NO VALID")
 
         
 
