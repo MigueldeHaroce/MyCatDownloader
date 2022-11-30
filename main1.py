@@ -363,7 +363,7 @@ class MainWindow1(QMainWindow):
 
     def passInfo(self):
         my_path = my_path_to_pass
-        threading.Thread(target=detect, args=(my_path, self.format,)).start()
+        detect(my_path, self.format)
 
 
         
