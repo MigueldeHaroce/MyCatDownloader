@@ -7,7 +7,7 @@
 # IMPORT GUI FILE
 from ui_interface1 import *
 ########################################################################
-
+import threading
 ########################################################################
 # IMPORT Custom widgets
 from Custom_Widgets.Widgets import *
@@ -363,7 +363,7 @@ class MainWindow1(QMainWindow):
 
     def passInfo(self):
         my_path = my_path_to_pass
-        detect(my_path, self.format)
+        threading.Thread(target=detect, args=(my_path, self.format,)).start()
 
 
         

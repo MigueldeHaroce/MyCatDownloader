@@ -1,5 +1,7 @@
+import threading
 from pathlib import Path
 import moviepy.editor as moviepy
+from PySide2.QtWidgets import QMessageBox
 
 def detect(myPath, myOutput):
     formats = [".mp4",
@@ -24,7 +26,7 @@ def detect(myPath, myOutput):
 
     nameFile = Path(myPath).name
     print(input_format)
-    convert(nameFile, myPath, input_format, myOutput)
+    threading.Thread(target=convert, args=(nameFile, myPath, input_format, myOutput,)).start()
 
 def convert(name, myPath, myInput, output):
     
@@ -33,7 +35,7 @@ def convert(name, myPath, myInput, output):
     nameOnly = name[:formatsDict]
     pathOnly = myPath[:-formatsDict]
     print(nameOnly)
-    
+
     if myInput == ".mp4" or myInput == ".avi" or myInput == ".mkv" or myInput == ".webm" or myInput == ".mov":
         if output == ".mp4" or output == ".avi" or output == ".mkv" or output == ".mov":
             if output != ".webp":
@@ -41,14 +43,30 @@ def convert(name, myPath, myInput, output):
                     clip = moviepy.VideoFileClip(r"" + myPath)
                     result = moviepy.CompositeVideoClip([clip])
                     result.write_videofile(pathOnly + output, codec='mpeg4')
+                    msg = QMessageBox()
+                    msg.setWindowTitle("Alert")
+                    msg.setText("Your video is converted!")
+                    msg.setInformativeText("Thanks for Using MyCatDownloader")
+                    msg.setIcon(QMessageBox.Information)
+                    x = msg.exec_()
                 else:
                     # TODO POPUP
-                    print("idk")
+                    msg = QMessageBox()
+                    msg.setWindowTitle("Alert")
+                    msg.setText("Select a valid format!")
+                    msg.setIcon(QMessageBox.Warning)
+                    x = msg.exec_()
         elif output == ".webm":
             if myInput != output:
                 clip = moviepy.VideoFileClip(r"" + myPath)
                 result = moviepy.CompositeVideoClip([clip])
                 result.write_videofile(pathOnly + output, codec='libvpx')
+        else:
+            msg = QMessageBox()
+            msg.setWindowTitle("Alert")
+            msg.setText("Select a valid format!")
+            msg.setIcon(QMessageBox.Warning)
+            x = msg.exec_()
 
     elif myInput == ".png" or myInput == ".jpg" or myInput == ".jpeg" or myInput == ".webp" or myInput == ".tiff":
         if output == ".png" or output == ".jpg" or output == ".jpeg" or output == ".webp" or output == ".tiff":
