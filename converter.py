@@ -2,6 +2,8 @@ import threading
 from pathlib import Path
 import moviepy.editor as moviepy
 from PySide2.QtWidgets import QMessageBox
+import sys
+from PyQt5 import QtCore, QtGui, QtWidgets, uic
 
 def detect(myPath, myOutput):
     formats = [".mp4",
@@ -27,9 +29,10 @@ def detect(myPath, myOutput):
     nameFile = Path(myPath).name
     print(input_format)
     threading.Thread(target=convert, args=(nameFile, myPath, input_format, myOutput,)).start()
-
+def call_warn_popup():
+    QtWidgets.QMessageBox.information(None, "Error", "Random value above limit",
+                                      QtWidgets.QMessageBox.Ok)
 def convert(name, myPath, myInput, output):
-    
     formatsDict = len(myInput)
     print(formatsDict)
     nameOnly = name[:formatsDict]
@@ -43,30 +46,24 @@ def convert(name, myPath, myInput, output):
                     clip = moviepy.VideoFileClip(r"" + myPath)
                     result = moviepy.CompositeVideoClip([clip])
                     result.write_videofile(pathOnly + output, codec='mpeg4')
-                    msg = QMessageBox()
-                    msg.setWindowTitle("Alert")
-                    msg.setText("Your video is converted!")
-                    msg.setInformativeText("Thanks for Using MyCatDownloader")
-                    msg.setIcon(QMessageBox.Information)
-                    x = msg.exec_()
+                    #msg = QMessageBox()
+                    #msg.setWindowTitle("Alert")
+                    #msg.setText("Your video is converted!")
+                    #msg.setInformativeText("Thanks for Using MyCatDownloader")
+                    #msg.setIcon(QMessageBox.Information)
+                    #sys.exit(msg.exec_())
                 else:
                     # TODO POPUP
-                    msg = QMessageBox()
-                    msg.setWindowTitle("Alert")
-                    msg.setText("Select a valid format!")
-                    msg.setIcon(QMessageBox.Warning)
-                    x = msg.exec_()
+                    threading.Thread(target=call_warn_popup).start()
+
         elif output == ".webm":
             if myInput != output:
                 clip = moviepy.VideoFileClip(r"" + myPath)
                 result = moviepy.CompositeVideoClip([clip])
                 result.write_videofile(pathOnly + output, codec='libvpx')
         else:
-            msg = QMessageBox()
-            msg.setWindowTitle("Alert")
-            msg.setText("Select a valid format!")
-            msg.setIcon(QMessageBox.Warning)
-            x = msg.exec_()
+            pass
+            #threading.Thread(target=call_warn_popup).start()
 
     elif myInput == ".png" or myInput == ".jpg" or myInput == ".jpeg" or myInput == ".webp" or myInput == ".tiff":
         if output == ".png" or output == ".jpg" or output == ".jpeg" or output == ".webp" or output == ".tiff":

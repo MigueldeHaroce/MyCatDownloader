@@ -1,6 +1,7 @@
 ########################################################################
 ## IMPORTS
 ########################################################################
+import threading
 import urllib.request
 ########################################################################
 # IMPORT GUI FILE
@@ -12,7 +13,7 @@ import main1
 from Custom_Widgets.Widgets import *
 ########################################################################
 from youtubeDownloader import downloadYtVid, downloadYtAudio
-from converter import detect
+
 
 ########################################################################
 # MAIN WINDOW CLASS
@@ -115,10 +116,10 @@ class MainWindow(QMainWindow):
             validation = True
         except:
             validation = False
-        print( 'connected' if validation else 'no internet!' )
+        print('connected' if validation else 'no internet!')
         if validation:
             try:
-                downloadYtVid(text, response)
+                threading.Thread(target=downloadYtVid, args=(response,))
                 msg = QMessageBox()
                 msg.setWindowTitle("Alert")
                 msg.setText("Your video is downloaded!")
