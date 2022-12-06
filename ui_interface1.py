@@ -1,18 +1,15 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'untitledFzatnd.ui'
+## Form generated from reading UI file 'untitledZSRxWn.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.14.1
+## Created by: Qt User Interface Compiler version 5.15.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
-    QRect, QSize, QUrl, Qt)
-from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
-    QFontDatabase, QIcon, QLinearGradient, QPalette, QPainter, QPixmap,
-    QRadialGradient)
+from PySide2.QtCore import *
+from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 from Custom_Widgets.Widgets import QCustomStackedWidget
@@ -21,10 +18,10 @@ from Custom_Widgets.Widgets import QCustomSlideMenu
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        if MainWindow.objectName():
+        if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.setEnabled(True)
-        MainWindow.resize(361, 329)
+        MainWindow.resize(321, 329)
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -147,15 +144,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_11.setSpacing(0)
         self.verticalLayout_11.setObjectName(u"verticalLayout_11")
         self.verticalLayout_11.setContentsMargins(0, 0, 0, 0)
-        self.infoBtn = QPushButton(self.frame_3)
-        self.infoBtn.setObjectName(u"infoBtn")
-        icon4 = QIcon()
-        icon4.addFile(u"logois/info.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.infoBtn.setIcon(icon4)
-        self.infoBtn.setIconSize(QSize(24, 24))
-
-        self.verticalLayout_11.addWidget(self.infoBtn)
-
 
         self.verticalLayout.addWidget(self.frame_3)
 
@@ -225,17 +213,17 @@ class Ui_MainWindow(object):
         self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
         self.minusBtn = QPushButton(self.frame_6)
         self.minusBtn.setObjectName(u"minusBtn")
-        icon5 = QIcon()
-        icon5.addFile(u"logois/minus.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.minusBtn.setIcon(icon5)
+        icon4 = QIcon()
+        icon4.addFile(u"logois/minus.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.minusBtn.setIcon(icon4)
 
         self.horizontalLayout_5.addWidget(self.minusBtn)
 
         self.exitBtn = QPushButton(self.frame_6)
         self.exitBtn.setObjectName(u"exitBtn")
-        icon6 = QIcon()
-        icon6.addFile(u"logois/x.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.exitBtn.setIcon(icon6)
+        icon5 = QIcon()
+        icon5.addFile(u"logois/x.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.exitBtn.setIcon(icon5)
         self.exitBtn.setIconSize(QSize(20, 20))
 
         self.horizontalLayout_5.addWidget(self.exitBtn)
@@ -666,7 +654,6 @@ class Ui_MainWindow(object):
         self.vidBtn.setText("")
         self.imgBtn.setText("")
         self.musBtn.setText("")
-        self.infoBtn.setText("")
         self.label_4.setText("")
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"MyCat Downloader", None))
         self.minusBtn.setText("")
