@@ -24,8 +24,7 @@
 						{
 							"homeBtn": "homePage",
 							"vidBtn": "vidPage",
-							"imgBtn": "imgPage",
-							"musBtn": "audPage"
+							"imgBtn": "imgPage"
 
 						}
 					]
@@ -39,8 +38,7 @@
 				"Buttons": [
 					"homeBtn",
 					"vidBtn",
-					"imgBtn",
-					"musBtn"
+					"imgBtn"
 				],
 				"Style":[
 				{

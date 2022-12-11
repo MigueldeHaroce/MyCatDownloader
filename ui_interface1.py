@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'untitledZSRxWn.ui'
+## Form generated from reading UI file 'untitledseWVSG.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -21,7 +21,7 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.setEnabled(True)
-        MainWindow.resize(321, 329)
+        MainWindow.resize(321, 315)
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -104,6 +104,7 @@ class Ui_MainWindow(object):
 
         self.vidBtn = QPushButton(self.frame_2)
         self.vidBtn.setObjectName(u"vidBtn")
+        self.vidBtn.setCursor(QCursor(Qt.PointingHandCursor))
         icon1 = QIcon()
         icon1.addFile(u"logois/video.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.vidBtn.setIcon(icon1)
@@ -113,6 +114,7 @@ class Ui_MainWindow(object):
 
         self.imgBtn = QPushButton(self.frame_2)
         self.imgBtn.setObjectName(u"imgBtn")
+        self.imgBtn.setCursor(QCursor(Qt.PointingHandCursor))
         icon2 = QIcon()
         icon2.addFile(u"logois/image.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.imgBtn.setIcon(icon2)
@@ -120,21 +122,21 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_10.addWidget(self.imgBtn)
 
-        self.musBtn = QPushButton(self.frame_2)
-        self.musBtn.setObjectName(u"musBtn")
-        icon3 = QIcon()
-        icon3.addFile(u"logois/music.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.musBtn.setIcon(icon3)
-        self.musBtn.setIconSize(QSize(24, 24))
-
-        self.verticalLayout_10.addWidget(self.musBtn)
-
 
         self.verticalLayout.addWidget(self.frame_2)
 
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout.addItem(self.verticalSpacer)
+
+        self.pushButton = QPushButton(self.widget)
+        self.pushButton.setObjectName(u"pushButton")
+        icon3 = QIcon()
+        icon3.addFile(u"logois/info.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton.setIcon(icon3)
+        self.pushButton.setIconSize(QSize(24, 24))
+
+        self.verticalLayout.addWidget(self.pushButton)
 
         self.frame_3 = QFrame(self.widget)
         self.frame_3.setObjectName(u"frame_3")
@@ -213,6 +215,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
         self.minusBtn = QPushButton(self.frame_6)
         self.minusBtn.setObjectName(u"minusBtn")
+        self.minusBtn.setCursor(QCursor(Qt.PointingHandCursor))
         icon4 = QIcon()
         icon4.addFile(u"logois/minus.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.minusBtn.setIcon(icon4)
@@ -221,6 +224,7 @@ class Ui_MainWindow(object):
 
         self.exitBtn = QPushButton(self.frame_6)
         self.exitBtn.setObjectName(u"exitBtn")
+        self.exitBtn.setCursor(QCursor(Qt.PointingHandCursor))
         icon5 = QIcon()
         icon5.addFile(u"logois/x.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.exitBtn.setIcon(icon5)
@@ -242,6 +246,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_12.setContentsMargins(0, 0, 0, 0)
         self.stackedWidget_2 = QCustomStackedWidget(self.widget_7)
         self.stackedWidget_2.setObjectName(u"stackedWidget_2")
+        self.stackedWidget_2.setCursor(QCursor(Qt.ArrowCursor))
         self.homePage = QWidget()
         self.homePage.setObjectName(u"homePage")
         self.horizontalLayout_10 = QHBoxLayout(self.homePage)
@@ -298,116 +303,144 @@ class Ui_MainWindow(object):
         self.vidPage = QWidget()
         self.vidPage.setObjectName(u"vidPage")
         self.verticalLayout_5 = QVBoxLayout(self.vidPage)
-        self.verticalLayout_5.setSpacing(0)
+        self.verticalLayout_5.setSpacing(6)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
-        self.verticalLayout_5.setContentsMargins(9, 9, 9, 0)
+        self.verticalLayout_5.setContentsMargins(9, 9, 9, 9)
         self.widget_2 = QWidget(self.vidPage)
         self.widget_2.setObjectName(u"widget_2")
-        sizePolicy5 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
-        sizePolicy5.setHorizontalStretch(0)
-        sizePolicy5.setVerticalStretch(0)
-        sizePolicy5.setHeightForWidth(self.widget_2.sizePolicy().hasHeightForWidth())
-        self.widget_2.setSizePolicy(sizePolicy5)
-        self.verticalLayout_15 = QVBoxLayout(self.widget_2)
-        self.verticalLayout_15.setObjectName(u"verticalLayout_15")
-        self.widget_21 = QWidget(self.widget_2)
-        self.widget_21.setObjectName(u"widget_21")
-        sizePolicy5.setHeightForWidth(self.widget_21.sizePolicy().hasHeightForWidth())
-        self.widget_21.setSizePolicy(sizePolicy5)
-        self.horizontalLayout_17 = QHBoxLayout(self.widget_21)
-        self.horizontalLayout_17.setSpacing(0)
-        self.horizontalLayout_17.setObjectName(u"horizontalLayout_17")
-        self.horizontalLayout_17.setContentsMargins(0, 0, 0, 0)
-        self.label_11 = QLabel(self.widget_21)
-        self.label_11.setObjectName(u"label_11")
-        font2 = QFont()
-        font2.setPointSize(15)
-        self.label_11.setFont(font2)
-        self.label_11.setStyleSheet(u"color: rgb(255, 255, 255);")
-
-        self.horizontalLayout_17.addWidget(self.label_11, 0, Qt.AlignTop)
-
-
-        self.verticalLayout_15.addWidget(self.widget_21, 0, Qt.AlignTop)
-
-
-        self.verticalLayout_5.addWidget(self.widget_2, 0, Qt.AlignHCenter)
-
-        self.widget_6 = QWidget(self.vidPage)
-        self.widget_6.setObjectName(u"widget_6")
-        sizePolicy4.setHeightForWidth(self.widget_6.sizePolicy().hasHeightForWidth())
-        self.widget_6.setSizePolicy(sizePolicy4)
-        self.horizontalLayout_8 = QHBoxLayout(self.widget_6)
+        self.horizontalLayout_8 = QHBoxLayout(self.widget_2)
         self.horizontalLayout_8.setSpacing(0)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
-        self.horizontalLayout_8.setContentsMargins(0, 6, 0, 0)
-        self.widget_9 = QWidget(self.widget_6)
-        self.widget_9.setObjectName(u"widget_9")
-        self.widget_9.setStyleSheet(u"* {\n"
+        self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
+        self.widget_27 = QWidget(self.widget_2)
+        self.widget_27.setObjectName(u"widget_27")
+        self.verticalLayout_3 = QVBoxLayout(self.widget_27)
+        self.verticalLayout_3.setSpacing(0)
+        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.widget_28 = QWidget(self.widget_27)
+        self.widget_28.setObjectName(u"widget_28")
+        sizePolicy5 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+        sizePolicy5.setHorizontalStretch(0)
+        sizePolicy5.setVerticalStretch(0)
+        sizePolicy5.setHeightForWidth(self.widget_28.sizePolicy().hasHeightForWidth())
+        self.widget_28.setSizePolicy(sizePolicy5)
+        self.horizontalLayout_20 = QHBoxLayout(self.widget_28)
+        self.horizontalLayout_20.setSpacing(0)
+        self.horizontalLayout_20.setObjectName(u"horizontalLayout_20")
+        self.horizontalLayout_20.setContentsMargins(9, 9, 9, 9)
+        self.label_15 = QLabel(self.widget_28)
+        self.label_15.setObjectName(u"label_15")
+        font2 = QFont()
+        font2.setPointSize(15)
+        self.label_15.setFont(font2)
+        self.label_15.setStyleSheet(u"color: rgb(255, 255, 255);")
+
+        self.horizontalLayout_20.addWidget(self.label_15, 0, Qt.AlignHCenter|Qt.AlignTop)
+
+
+        self.verticalLayout_3.addWidget(self.widget_28, 0, Qt.AlignTop)
+
+        self.widget_29 = QWidget(self.widget_27)
+        self.widget_29.setObjectName(u"widget_29")
+        sizePolicy6 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Maximum)
+        sizePolicy6.setHorizontalStretch(0)
+        sizePolicy6.setVerticalStretch(0)
+        sizePolicy6.setHeightForWidth(self.widget_29.sizePolicy().hasHeightForWidth())
+        self.widget_29.setSizePolicy(sizePolicy6)
+        self.widget_29.setLayoutDirection(Qt.LeftToRight)
+        self.horizontalLayout_21 = QHBoxLayout(self.widget_29)
+        self.horizontalLayout_21.setSpacing(0)
+        self.horizontalLayout_21.setObjectName(u"horizontalLayout_21")
+        self.horizontalLayout_21.setContentsMargins(0, 6, 0, 0)
+        self.widget_30 = QWidget(self.widget_29)
+        self.widget_30.setObjectName(u"widget_30")
+        self.widget_30.setStyleSheet(u"* {\n"
 "	color: rgb(255, 255, 255);\n"
 "	background-color: #2c313c;\n"
 "	border-top-left-radius:10px;\n"
 "	border-bottom-left-radius:10px;\n"
 "\n"
 "}")
-        self.verticalLayout_6 = QVBoxLayout(self.widget_9)
-        self.verticalLayout_6.setObjectName(u"verticalLayout_6")
-        self.verticalLayout_6.setContentsMargins(-1, -1, 0, -1)
-        self.checkBox_2 = QCheckBox(self.widget_9)
-        self.checkBox_2.setObjectName(u"checkBox_2")
+        self.verticalLayout_19 = QVBoxLayout(self.widget_30)
+        self.verticalLayout_19.setObjectName(u"verticalLayout_19")
+        self.verticalLayout_19.setContentsMargins(-1, -1, 0, -1)
+        self.checkBox_21 = QCheckBox(self.widget_30)
+        self.checkBox_21.setObjectName(u"checkBox_21")
 
-        self.verticalLayout_6.addWidget(self.checkBox_2, 0, Qt.AlignLeft)
+        self.verticalLayout_19.addWidget(self.checkBox_21, 0, Qt.AlignLeft)
 
-        self.checkBox_3 = QCheckBox(self.widget_9)
-        self.checkBox_3.setObjectName(u"checkBox_3")
+        self.checkBox_22 = QCheckBox(self.widget_30)
+        self.checkBox_22.setObjectName(u"checkBox_22")
 
-        self.verticalLayout_6.addWidget(self.checkBox_3, 0, Qt.AlignLeft)
+        self.verticalLayout_19.addWidget(self.checkBox_22, 0, Qt.AlignLeft)
 
-        self.checkBox = QCheckBox(self.widget_9)
-        self.checkBox.setObjectName(u"checkBox")
+        self.checkBox_23 = QCheckBox(self.widget_30)
+        self.checkBox_23.setObjectName(u"checkBox_23")
 
-        self.verticalLayout_6.addWidget(self.checkBox, 0, Qt.AlignLeft)
+        self.verticalLayout_19.addWidget(self.checkBox_23, 0, Qt.AlignLeft)
 
 
-        self.horizontalLayout_8.addWidget(self.widget_9, 0, Qt.AlignTop)
+        self.horizontalLayout_21.addWidget(self.widget_30, 0, Qt.AlignTop)
 
-        self.widget_8 = QWidget(self.widget_6)
-        self.widget_8.setObjectName(u"widget_8")
-        self.widget_8.setStyleSheet(u"* {\n"
+        self.widget_31 = QWidget(self.widget_29)
+        self.widget_31.setObjectName(u"widget_31")
+        self.widget_31.setStyleSheet(u"* {\n"
 "	color: rgb(255, 255, 255);\n"
 "	background-color: #2c313c;\n"
 "	border-top-right-radius:10px;\n"
 "	border-bottom-right-radius:10px;\n"
 "\n"
 "}")
-        self.verticalLayout_7 = QVBoxLayout(self.widget_8)
-        self.verticalLayout_7.setObjectName(u"verticalLayout_7")
-        self.verticalLayout_7.setContentsMargins(-1, -1, 0, -1)
-        self.checkBox_4 = QCheckBox(self.widget_8)
-        self.checkBox_4.setObjectName(u"checkBox_4")
-        self.checkBox_4.setTristate(False)
+        self.verticalLayout_20 = QVBoxLayout(self.widget_31)
+        self.verticalLayout_20.setObjectName(u"verticalLayout_20")
+        self.verticalLayout_20.setContentsMargins(-1, -1, 0, -1)
+        self.checkBox_24 = QCheckBox(self.widget_31)
+        self.checkBox_24.setObjectName(u"checkBox_24")
+        self.checkBox_24.setTristate(False)
 
-        self.verticalLayout_7.addWidget(self.checkBox_4, 0, Qt.AlignLeft)
+        self.verticalLayout_20.addWidget(self.checkBox_24, 0, Qt.AlignLeft)
 
-        self.checkBox_5 = QCheckBox(self.widget_8)
-        self.checkBox_5.setObjectName(u"checkBox_5")
-        self.checkBox_5.setTristate(False)
+        self.checkBox_25 = QCheckBox(self.widget_31)
+        self.checkBox_25.setObjectName(u"checkBox_25")
+        self.checkBox_25.setTristate(False)
 
-        self.verticalLayout_7.addWidget(self.checkBox_5, 0, Qt.AlignLeft)
+        self.verticalLayout_20.addWidget(self.checkBox_25, 0, Qt.AlignLeft)
 
-        self.pushButton_5 = QPushButton(self.widget_8)
-        self.pushButton_5.setObjectName(u"pushButton_5")
+        self.pushButton_10 = QPushButton(self.widget_31)
+        self.pushButton_10.setObjectName(u"pushButton_10")
         font3 = QFont()
         font3.setPointSize(8)
-        self.pushButton_5.setFont(font3)
+        self.pushButton_10.setFont(font3)
+        self.pushButton_10.setCursor(QCursor(Qt.PointingHandCursor))
 
-        self.verticalLayout_7.addWidget(self.pushButton_5, 0, Qt.AlignLeft)
-
-
-        self.horizontalLayout_8.addWidget(self.widget_8, 0, Qt.AlignTop)
+        self.verticalLayout_20.addWidget(self.pushButton_10, 0, Qt.AlignLeft)
 
 
-        self.verticalLayout_5.addWidget(self.widget_6, 0, Qt.AlignTop)
+        self.horizontalLayout_21.addWidget(self.widget_31, 0, Qt.AlignTop)
+
+
+        self.verticalLayout_3.addWidget(self.widget_29, 0, Qt.AlignTop)
+
+        self.widget_4 = QWidget(self.widget_27)
+        self.widget_4.setObjectName(u"widget_4")
+        self.horizontalLayout_4 = QHBoxLayout(self.widget_4)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.label_to_change = QLabel(self.widget_4)
+        self.label_to_change.setObjectName(u"label_to_change")
+        self.label_to_change.setStyleSheet(u"color:rgb(255,255,255);\n"
+"font:45px;")
+
+        self.horizontalLayout_4.addWidget(self.label_to_change, 0, Qt.AlignHCenter|Qt.AlignTop)
+
+
+        self.verticalLayout_3.addWidget(self.widget_4)
+
+
+        self.horizontalLayout_8.addWidget(self.widget_27, 0, Qt.AlignTop)
+
+
+        self.verticalLayout_5.addWidget(self.widget_2)
 
         self.stackedWidget_2.addWidget(self.vidPage)
         self.imgPage = QWidget()
@@ -422,12 +455,14 @@ class Ui_MainWindow(object):
         self.verticalLayout_9.setContentsMargins(0, 0, 0, 0)
         self.widget_22 = QWidget(self.widget_11)
         self.widget_22.setObjectName(u"widget_22")
-        self.verticalLayout_16 = QVBoxLayout(self.widget_22)
-        self.verticalLayout_16.setSpacing(0)
-        self.verticalLayout_16.setObjectName(u"verticalLayout_16")
-        self.verticalLayout_16.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_2 = QVBoxLayout(self.widget_22)
+        self.verticalLayout_2.setSpacing(0)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.widget_23 = QWidget(self.widget_22)
         self.widget_23.setObjectName(u"widget_23")
+        sizePolicy5.setHeightForWidth(self.widget_23.sizePolicy().hasHeightForWidth())
+        self.widget_23.setSizePolicy(sizePolicy5)
         self.horizontalLayout_18 = QHBoxLayout(self.widget_23)
         self.horizontalLayout_18.setSpacing(0)
         self.horizontalLayout_18.setObjectName(u"horizontalLayout_18")
@@ -440,12 +475,13 @@ class Ui_MainWindow(object):
         self.horizontalLayout_18.addWidget(self.label_14, 0, Qt.AlignHCenter|Qt.AlignTop)
 
 
-        self.verticalLayout_16.addWidget(self.widget_23)
+        self.verticalLayout_2.addWidget(self.widget_23, 0, Qt.AlignTop)
 
         self.widget_24 = QWidget(self.widget_22)
         self.widget_24.setObjectName(u"widget_24")
-        sizePolicy4.setHeightForWidth(self.widget_24.sizePolicy().hasHeightForWidth())
-        self.widget_24.setSizePolicy(sizePolicy4)
+        sizePolicy6.setHeightForWidth(self.widget_24.sizePolicy().hasHeightForWidth())
+        self.widget_24.setSizePolicy(sizePolicy6)
+        self.widget_24.setLayoutDirection(Qt.LeftToRight)
         self.horizontalLayout_19 = QHBoxLayout(self.widget_24)
         self.horizontalLayout_19.setSpacing(0)
         self.horizontalLayout_19.setObjectName(u"horizontalLayout_19")
@@ -507,6 +543,7 @@ class Ui_MainWindow(object):
         self.pushButton_9 = QPushButton(self.widget_26)
         self.pushButton_9.setObjectName(u"pushButton_9")
         self.pushButton_9.setFont(font3)
+        self.pushButton_9.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.verticalLayout_18.addWidget(self.pushButton_9, 0, Qt.AlignLeft)
 
@@ -514,121 +551,29 @@ class Ui_MainWindow(object):
         self.horizontalLayout_19.addWidget(self.widget_26, 0, Qt.AlignTop)
 
 
-        self.verticalLayout_16.addWidget(self.widget_24)
+        self.verticalLayout_2.addWidget(self.widget_24)
+
+        self.widget_3 = QWidget(self.widget_22)
+        self.widget_3.setObjectName(u"widget_3")
+        self.horizontalLayout_3 = QHBoxLayout(self.widget_3)
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.label_to_change1 = QLabel(self.widget_3)
+        self.label_to_change1.setObjectName(u"label_to_change1")
+        self.label_to_change1.setStyleSheet(u"color:rgb(255,255,255);\n"
+"font:45px;")
+
+        self.horizontalLayout_3.addWidget(self.label_to_change1, 0, Qt.AlignHCenter|Qt.AlignTop)
 
 
-        self.verticalLayout_9.addWidget(self.widget_22)
+        self.verticalLayout_2.addWidget(self.widget_3)
+
+
+        self.verticalLayout_9.addWidget(self.widget_22, 0, Qt.AlignTop)
 
 
         self.horizontalLayout_11.addWidget(self.widget_11)
 
         self.stackedWidget_2.addWidget(self.imgPage)
-        self.audPage = QWidget()
-        self.audPage.setObjectName(u"audPage")
-        self.horizontalLayout_14 = QHBoxLayout(self.audPage)
-        self.horizontalLayout_14.setSpacing(0)
-        self.horizontalLayout_14.setObjectName(u"horizontalLayout_14")
-        self.horizontalLayout_14.setContentsMargins(-1, 9, -1, 0)
-        self.widget_16 = QWidget(self.audPage)
-        self.widget_16.setObjectName(u"widget_16")
-        self.verticalLayout_14 = QVBoxLayout(self.widget_16)
-        self.verticalLayout_14.setSpacing(0)
-        self.verticalLayout_14.setObjectName(u"verticalLayout_14")
-        self.verticalLayout_14.setContentsMargins(0, 0, 0, 0)
-        self.widget_20 = QWidget(self.widget_16)
-        self.widget_20.setObjectName(u"widget_20")
-        self.horizontalLayout_16 = QHBoxLayout(self.widget_20)
-        self.horizontalLayout_16.setSpacing(0)
-        self.horizontalLayout_16.setObjectName(u"horizontalLayout_16")
-        self.horizontalLayout_16.setContentsMargins(9, 9, 9, 9)
-        self.label_13 = QLabel(self.widget_20)
-        self.label_13.setObjectName(u"label_13")
-        self.label_13.setFont(font2)
-        self.label_13.setStyleSheet(u"color: rgb(255, 255, 255);")
-
-        self.horizontalLayout_16.addWidget(self.label_13, 0, Qt.AlignHCenter|Qt.AlignTop)
-
-
-        self.verticalLayout_14.addWidget(self.widget_20)
-
-        self.widget_17 = QWidget(self.widget_16)
-        self.widget_17.setObjectName(u"widget_17")
-        sizePolicy4.setHeightForWidth(self.widget_17.sizePolicy().hasHeightForWidth())
-        self.widget_17.setSizePolicy(sizePolicy4)
-        self.horizontalLayout_15 = QHBoxLayout(self.widget_17)
-        self.horizontalLayout_15.setSpacing(0)
-        self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
-        self.horizontalLayout_15.setContentsMargins(0, 6, 0, 0)
-        self.widget_18 = QWidget(self.widget_17)
-        self.widget_18.setObjectName(u"widget_18")
-        self.widget_18.setStyleSheet(u"* {\n"
-"	color: rgb(255, 255, 255);\n"
-"	background-color: #2c313c;\n"
-"	border-top-left-radius:10px;\n"
-"	border-bottom-left-radius:10px;\n"
-"\n"
-"}")
-        self.verticalLayout_12 = QVBoxLayout(self.widget_18)
-        self.verticalLayout_12.setObjectName(u"verticalLayout_12")
-        self.verticalLayout_12.setContentsMargins(-1, -1, 0, -1)
-        self.checkBox_11 = QCheckBox(self.widget_18)
-        self.checkBox_11.setObjectName(u"checkBox_11")
-
-        self.verticalLayout_12.addWidget(self.checkBox_11, 0, Qt.AlignLeft)
-
-        self.checkBox_12 = QCheckBox(self.widget_18)
-        self.checkBox_12.setObjectName(u"checkBox_12")
-
-        self.verticalLayout_12.addWidget(self.checkBox_12, 0, Qt.AlignLeft)
-
-        self.checkBox_13 = QCheckBox(self.widget_18)
-        self.checkBox_13.setObjectName(u"checkBox_13")
-
-        self.verticalLayout_12.addWidget(self.checkBox_13, 0, Qt.AlignLeft)
-
-
-        self.horizontalLayout_15.addWidget(self.widget_18, 0, Qt.AlignTop)
-
-        self.widget_19 = QWidget(self.widget_17)
-        self.widget_19.setObjectName(u"widget_19")
-        self.widget_19.setStyleSheet(u"* {\n"
-"	color: rgb(255, 255, 255);\n"
-"	background-color: #2c313c;\n"
-"	border-top-right-radius:10px;\n"
-"	border-bottom-right-radius:10px;\n"
-"\n"
-"}")
-        self.verticalLayout_13 = QVBoxLayout(self.widget_19)
-        self.verticalLayout_13.setObjectName(u"verticalLayout_13")
-        self.verticalLayout_13.setContentsMargins(-1, -1, 0, -1)
-        self.checkBox_14 = QCheckBox(self.widget_19)
-        self.checkBox_14.setObjectName(u"checkBox_14")
-        self.checkBox_14.setTristate(False)
-
-        self.verticalLayout_13.addWidget(self.checkBox_14, 0, Qt.AlignLeft)
-
-        self.checkBox_15 = QCheckBox(self.widget_19)
-        self.checkBox_15.setObjectName(u"checkBox_15")
-        self.checkBox_15.setTristate(False)
-
-        self.verticalLayout_13.addWidget(self.checkBox_15, 0, Qt.AlignLeft)
-
-        self.pushButton_8 = QPushButton(self.widget_19)
-        self.pushButton_8.setObjectName(u"pushButton_8")
-        self.pushButton_8.setFont(font3)
-
-        self.verticalLayout_13.addWidget(self.pushButton_8, 0, Qt.AlignLeft)
-
-
-        self.horizontalLayout_15.addWidget(self.widget_19, 0, Qt.AlignTop)
-
-
-        self.verticalLayout_14.addWidget(self.widget_17)
-
-
-        self.horizontalLayout_14.addWidget(self.widget_16)
-
-        self.stackedWidget_2.addWidget(self.audPage)
 
         self.horizontalLayout_12.addWidget(self.stackedWidget_2)
 
@@ -653,7 +598,7 @@ class Ui_MainWindow(object):
         self.homeBtn.setText("")
         self.vidBtn.setText("")
         self.imgBtn.setText("")
-        self.musBtn.setText("")
+        self.pushButton.setText("")
         self.label_4.setText("")
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"MyCat Downloader", None))
         self.minusBtn.setText("")
@@ -662,13 +607,14 @@ class Ui_MainWindow(object):
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"________________________________________", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"FORMAT MENU", None))
         self.clockLab.setText("")
-        self.label_11.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Video Formats!</p></body></html>", None))
-        self.checkBox_2.setText(QCoreApplication.translate("MainWindow", u".mp4", None))
-        self.checkBox_3.setText(QCoreApplication.translate("MainWindow", u".mkv", None))
-        self.checkBox.setText(QCoreApplication.translate("MainWindow", u".avi", None))
-        self.checkBox_4.setText(QCoreApplication.translate("MainWindow", u".webp", None))
-        self.checkBox_5.setText(QCoreApplication.translate("MainWindow", u".mov", None))
-        self.pushButton_5.setText(QCoreApplication.translate("MainWindow", u"Convert!", None))
+        self.label_15.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Video Formats!</p></body></html>", None))
+        self.checkBox_21.setText(QCoreApplication.translate("MainWindow", u".mp4", None))
+        self.checkBox_22.setText(QCoreApplication.translate("MainWindow", u".mkv", None))
+        self.checkBox_23.setText(QCoreApplication.translate("MainWindow", u".avi", None))
+        self.checkBox_24.setText(QCoreApplication.translate("MainWindow", u".webm", None))
+        self.checkBox_25.setText(QCoreApplication.translate("MainWindow", u".mov", None))
+        self.pushButton_10.setText(QCoreApplication.translate("MainWindow", u"Convert!", None))
+        self.label_to_change.setText("")
         self.label_14.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Image Formats!</p></body></html>", None))
         self.checkBox_16.setText(QCoreApplication.translate("MainWindow", u".png", None))
         self.checkBox_17.setText(QCoreApplication.translate("MainWindow", u".jpg", None))
@@ -676,12 +622,6 @@ class Ui_MainWindow(object):
         self.checkBox_19.setText(QCoreApplication.translate("MainWindow", u".webp", None))
         self.checkBox_20.setText(QCoreApplication.translate("MainWindow", u".tiff", None))
         self.pushButton_9.setText(QCoreApplication.translate("MainWindow", u"Convert!", None))
-        self.label_13.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Audio Formats!</p></body></html>", None))
-        self.checkBox_11.setText(QCoreApplication.translate("MainWindow", u".mp3", None))
-        self.checkBox_12.setText(QCoreApplication.translate("MainWindow", u".wav", None))
-        self.checkBox_13.setText(QCoreApplication.translate("MainWindow", u".aac", None))
-        self.checkBox_14.setText(QCoreApplication.translate("MainWindow", u".flac", None))
-        self.checkBox_15.setText(QCoreApplication.translate("MainWindow", u".aiff", None))
-        self.pushButton_8.setText(QCoreApplication.translate("MainWindow", u"Convert!", None))
+        self.label_to_change1.setText("")
     # retranslateUi
 
