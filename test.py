@@ -1,85 +1,54 @@
-from random import randint
-import sys
-from PyQt5.QtCore import QTimer
-from PyQt5.QtWidgets import QWidget, QApplication, QVBoxLayout, QProgressBar
+from PyQt5 import QtCore, QtGui, QtWidgets, uic
+import sys, threading, random
 
-StyleSheet = '''
-#RedProgressBar {
-    text-align: center;
-}
-#RedProgressBar::chunk {
-    background-color: #F44336;
-}
-#GreenProgressBar {
-    min-height: 12px;
-    max-height: 12px;
-    border-radius: 6px;
-}
-#GreenProgressBar::chunk {
-    border-radius: 6px;
-    background-color: #009688;
-}
-#BlueProgressBar {
-    border: 2px solid #2196F3;
-    border-radius: 5px;
-    background-color: #E0E0E0;
-}
-#BlueProgressBar::chunk {
-    background-color: #2196F3;
-    width: 10px; 
-    margin: 0.5px;
-}
-'''
+qtCreatorMain = "CloseThread.ui"
+Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorMain)
 
+myKillReason = 20
 
-class ProgressBar(QProgressBar):
+class OperatorGUI(QtWidgets.QMainWindow, Ui_MainWindow):
+    finished = QtCore.pyqtSignal()
 
-    def __init__(self, *args, **kwargs):
-        super(ProgressBar, self).__init__(*args, **kwargs)
-        self.setValue(0)
-        if self.minimum() != self.maximum():
-            self.timer = QTimer(self, timeout=self.onTimeout)
-            self.timer.start(randint(1, 3) * 1000)
+    def __init__(self, parent=None):
+        super(OperatorGUI, self).__init__(parent)
+        self.setupUi(self)
 
-    def onTimeout(self):
-        if self.value() >= 100:
-            self.timer.stop()
-            self.timer.deleteLater()
-            del self.timer
-            return
-        self.setValue(self.value() + 1)
+        self.running = False
+        self.kill_reason = None
+        self.lock = threading.Lock()
 
+        self.runBtn.clicked.connect(self.run_pushed)
+        self.finished.connect(self.on_finished, QtCore.Qt.QueuedConnection)
 
-class Window(QWidget):
+    def run_pushed(self):
+        self.running = not self.running
+        if self.running:
+            self.thread_1 = threading.Thread(target=self.myThread).start()
+            self.label.setText("Running")
+        else:
+            self.label.setText("Not Running")
 
-    def __init__(self, *args, **kwargs):
-        super(Window, self).__init__(*args, **kwargs)
-        self.resize(800, 600)
-        layout = QVBoxLayout(self)
-        layout.addWidget(
-            ProgressBar(self, minimum=0, maximum=100, objectName="RedProgressBar"))
+    def on_finished(self):
+        self.label.setText("Not Running")
+        QtWidgets.QMessageBox.information(None, "Error", "Random value above limit",
+                                              QtWidgets.QMessageBox.Ok)
+    def myThread(self):
+        self.kill_reason = None
+        while self.running:
+            self.lock.acquire()
+            num = random.random()
+            if num > 0.99:
+                self.kill_reason = myKillReason
+                self.running = False
+            self.lock.release()
 
-        layout.addWidget(
-            ProgressBar(self, minimum=0, maximum=0, objectName="RedProgressBar"))
-
-        layout.addWidget(
-            ProgressBar(self, minimum=0, maximum=100, textVisible=False,
-                        objectName="GreenProgressBar"))
-        layout.addWidget(
-            ProgressBar(self, minimum=0, maximum=0, textVisible=False,
-                        objectName="GreenProgressBar"))
-
-        layout.addWidget(
-            ProgressBar(self, minimum=0, maximum=100, textVisible=False,
-                        objectName="BlueProgressBar"))
-        layout.addWidget(
-            ProgressBar(self, minimum=0, maximum=0, textVisible=False,
-                        objectName="BlueProgressBar"))
+        if self.kill_reason == myKillReason:
+            self.finished.emit()
 
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    app.setStyleSheet(StyleSheet)
-    w = Window()
-    w.show()
+    sys.settrace
+    app = QtWidgets.QApplication(sys.argv)
+    window = OperatorGUI()
+    window.show()
     sys.exit(app.exec_())
