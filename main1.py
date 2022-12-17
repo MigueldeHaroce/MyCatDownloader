@@ -12,7 +12,6 @@ import threading
 # IMPORT Custom widgets
 from Custom_Widgets.Widgets import *
 ########################################################################
-from converter import Convert
 import time
 from pathlib import Path
 import moviepy.editor as moviepy
@@ -27,24 +26,15 @@ import subprocess
 ## MAIN WINDOW CLASS
 ########################################################################
 class MainWindow1(QMainWindow):
-    #finished = qt.QtCore.pyqtSignal()
     def __init__(self):
         QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-        #self.running = False
-        #self.kill_reason = None
-        #self.lock = threading.Lock()
-        #self.finished.connect(self.set_Myprogress)
-        #QGraphicsObject()
-
-
         ########################################################################
         # APPLY JSON STYLESHEET
         ########################################################################
-        # self = QMainWindow class
-        # self.ui = Ui_MainWindow / user interface class
+
         loadJsonStyle(self, self.ui, jsonFiles={
             "style1.json",
             "style1.json"
@@ -238,20 +228,12 @@ class MainWindow1(QMainWindow):
         msg.setIcon(QMessageBox.Information)
         x = msg.exec_()
 
-    # https://stackoverflow.com/questions/33081529/in-pyqt-what-is-the-best-way-to-share-data-between-the-main-window-and-a-thread
-    ##############################################################################################################################
     def passInfo(self):
         self.ui.label_to_change.setText(QCoreApplication.translate("MainWindow", u"Working", None))
         self.ui.label_to_change1.setText(QCoreApplication.translate("MainWindow", u"Working", None))
         #self.thread1 = threading.Thread(target=self.set_Myprogress).start()
         self.my_path = my_path_to_pass
         self.detect(self.my_path, self.format)
-        #self.ui.label_to_change.setText("Done!")
-        #time.sleep(1)
-        #self.ui.label_to_change.setText("")
-
-
-
 
     def showTime(self):
 
@@ -285,7 +267,6 @@ class MainWindow1(QMainWindow):
                 input_format = i
 
         nameFile = Path(myPath).name
-        print(input_format)
         threading.Thread(target=self.convert, args=(nameFile, myPath, input_format, myOutput,)).start()
 
     def convert(self, name, myPath, myInput, output):
@@ -302,15 +283,7 @@ class MainWindow1(QMainWindow):
                         result = moviepy.CompositeVideoClip([clip])
                         result.write_videofile(pathOnly + output, codec='mpeg4')
                         self.ui.label_to_change.setText(QCoreApplication.translate("Mainwindow", u"Done!", None))
-                        #msg = QMessageBox()
-                        #msg.setWindowTitle("Alert")
-                        #msg.setText("Your video is converted!")
-                        #msg.setInformativeText("Thanks for Using MyCatDownloader")
-                        #msg.setIcon(QMessageBox.Information)
-                        #sys.exit(msg.exec_())
                     else:
-                        # TODO POPUP
-                        print("NO VALID")
                         self.ui.label_to_change.setText(QCoreApplication.translate("Mainwindow", u"ERROR!", None))
 
             elif output == ".webm":
@@ -318,32 +291,21 @@ class MainWindow1(QMainWindow):
                     clip = moviepy.VideoFileClip(r"" + myPath)
                     result = moviepy.CompositeVideoClip([clip])
                     result.write_videofile(pathOnly + output, codec='libvpx')
-                    self.ui.label_to_change.setText(QCoreApplication.translate("Mainwindow", u"Done!", None))
+                    self.ui.label_to_change.setText(QCoreApplication.translate("Mainwindow", u"Same format!", None))
             else:
-
-                print("NO VALID")
                 self.ui.label_to_change.setText(QCoreApplication.translate("Mainwindow", u"ERROR!", None))
 
         elif myInput == ".png" or myInput == ".jpg" or myInput == ".jpeg" or myInput == ".webp" or myInput == ".tiff":
             if output == ".png" or output == ".jpg" or output == ".jpeg" or output == ".webp" or output == ".tiff":
                 if myInput != output:
                     im1 = Image.open(myPath)
+                    im1 = im1.convert('RGB')
                     im1.save(f"{pathOnly}{output}")
                     self.ui.label_to_change1.setText(QCoreApplication.translate("Mainwindow", u"Done!", None))
                 else:
-                    self.ui.label_to_change1.setText(QCoreApplication.translate("Mainwindow", u"ERROR!", None))
+                    self.ui.label_to_change1.setText(QCoreApplication.translate("Mainwindow", u"Same format!", None))
             else:
                 self.ui.label_to_change1.setText(QCoreApplication.translate("Mainwindow", u"ERROR!", None))
-        elif myInput == ".mp3" or myInput == ".wac" or myInput == ".acc" or myInput == ".flac" or myInput == ".aiff":
-            if output == ".mp3" or output == ".wac" or output == ".acc" or output == ".flac" or output == ".aiff":
-                if myInput != output:
-                    # TODO
-                    pass
-
-                else:
-                    print("NO VALID")
-            else:
-                print("NO VALID")
         else:
             self.ui.label_to_change.setText(QCoreApplication.translate("Mainwindow", u"ERROR!", None))
             self.ui.label_to_change1.setText(QCoreApplication.translate("Mainwindow", u"ERROR!", None))
