@@ -13,10 +13,14 @@ import main1
 from Custom_Widgets.Widgets import *
 ########################################################################
 from youtubeDownloader import downloadYtVid, downloadYtAudio
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel
+
+import sys
 
 ########################################################################
 # MAIN WINDOW CLASS
 ########################################################################
+
 class dragEffect(QtWidgets.QLabel, QMainWindow):
     def __init__(self, *args, **kwargs):
         QMainWindow.__init__(self)
@@ -38,8 +42,42 @@ class dragEffect(QtWidgets.QLabel, QMainWindow):
             file_path = e.mimeData().urls()[0].toLocalFile()
             #print(file_path)
             #detect(file_path, ".mkv")
-            popup = main1.MainWindow1()
-            popup.get_path(idk=file_path)
+            formats = [".mp4",
+                       ".avi",
+                       ".mkv",
+                       ".webm",
+                       ".mov",
+                       ".png",
+                       ".jpg",
+                       ".jpeg",
+                       ".webp",
+                       ".tiff",
+                       ".mp3",
+                       ".wac",
+                       ".acc",
+                       ".flac",
+                       ".aiff"]
+            for i in formats:
+                if i in file_path:
+                    print("valid format")
+                    input_format = i
+            try:
+                if input_format == ".mp3" or input_format == ".wac" or input_format == ".acc" or input_format == ".flac" or input_format == ".aiff":
+                    msg = QMessageBox()
+                    msg.setWindowTitle("Alert")
+                    msg.setText("No audio files accepted")
+                    msg.setIcon(QMessageBox.Information)
+                    x = msg.exec_()
+
+                else:
+                    popup = main1.MainWindow1()
+                    popup.get_path(idk=file_path)
+            except:
+                msg = QMessageBox()
+                msg.setWindowTitle("Alert")
+                msg.setText("No other files accepted")
+                msg.setIcon(QMessageBox.Information)
+                x = msg.exec_()
             
             
         else:

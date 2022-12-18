@@ -1,18 +1,15 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interfaceGfsEuy.ui'
+## Form generated from reading UI file 'interfaceJvUqxE.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.14.1
+## Created by: Qt User Interface Compiler version 5.15.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
-    QRect, QSize, QUrl, Qt)
-from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
-    QFontDatabase, QIcon, QLinearGradient, QPalette, QPainter, QPixmap,
-    QRadialGradient)
+from PySide2.QtCore import *
+from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 from Custom_Widgets.Widgets import QCustomStackedWidget
@@ -21,10 +18,10 @@ from Custom_Widgets.Widgets import QCustomSlideMenu
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        if MainWindow.objectName():
+        if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.setEnabled(True)
-        MainWindow.resize(824, 602)
+        MainWindow.resize(726, 584)
         sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -106,7 +103,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.setContentsMargins(0, 10, 0, 0)
         self.menuBtn = QPushButton(self.frame_2)
         self.menuBtn.setObjectName(u"menuBtn")
-        self.menuBtn.setCursor(QCursor(Qt.PointingHandCursor))
         self.menuBtn.setStyleSheet(u"background-color: rgb(22, 25, 29);")
         icon = QIcon()
         icon.addFile(u"logois/menu.svg", QSize(), QIcon.Normal, QIcon.Off)
@@ -284,7 +280,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.setContentsMargins(0, 10, 0, 10)
         self.HelpBtn = QPushButton(self.frame_3)
         self.HelpBtn.setObjectName(u"HelpBtn")
-        self.HelpBtn.setCursor(QCursor(Qt.PointingHandCursor))
         self.HelpBtn.setStyleSheet(u"font: 8pt \"Franklin Gothic Medium\";\n"
 "color: rgb(255, 255, 255);")
         icon5 = QIcon()
@@ -296,7 +291,6 @@ class Ui_MainWindow(object):
 
         self.InfoBtn = QPushButton(self.frame_3)
         self.InfoBtn.setObjectName(u"InfoBtn")
-        self.InfoBtn.setCursor(QCursor(Qt.PointingHandCursor))
         self.InfoBtn.setStyleSheet(u"font: 8pt \"Franklin Gothic Medium\";\n"
 "color: rgb(255, 255, 255);")
         icon6 = QIcon()
@@ -318,16 +312,21 @@ class Ui_MainWindow(object):
         self.centerMenuContainer = QCustomSlideMenu(self.centralwidget)
         self.centerMenuContainer.setObjectName(u"centerMenuContainer")
         self.centerMenuContainer.setToolTipDuration(4)
-        self.centerMenuContainer.setStyleSheet(u"")
+        self.centerMenuContainer.setAutoFillBackground(False)
+        self.centerMenuContainer.setStyleSheet(u"background-color: #2c313c;")
         self.verticalLayout_6 = QVBoxLayout(self.centerMenuContainer)
         self.verticalLayout_6.setSpacing(0)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
         self.verticalLayout_6.setContentsMargins(0, 0, 0, 0)
         self.widget_2 = QWidget(self.centerMenuContainer)
         self.widget_2.setObjectName(u"widget_2")
-        sizePolicy.setHeightForWidth(self.widget_2.sizePolicy().hasHeightForWidth())
-        self.widget_2.setSizePolicy(sizePolicy)
-        self.widget_2.setMinimumSize(QSize(200, 0))
+        sizePolicy3 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(0)
+        sizePolicy3.setHeightForWidth(self.widget_2.sizePolicy().hasHeightForWidth())
+        self.widget_2.setSizePolicy(sizePolicy3)
+        self.widget_2.setMinimumSize(QSize(200, 100))
+        self.widget_2.setMaximumSize(QSize(16777215, 600))
         self.widget_2.setStyleSheet(u"background-color: #2c313c;")
         self.verticalLayout_7 = QVBoxLayout(self.widget_2)
         self.verticalLayout_7.setSpacing(5)
@@ -357,7 +356,6 @@ class Ui_MainWindow(object):
 
         self.closeMenuBtn = QPushButton(self.frame_4)
         self.closeMenuBtn.setObjectName(u"closeMenuBtn")
-        self.closeMenuBtn.setCursor(QCursor(Qt.PointingHandCursor))
         icon7 = QIcon()
         icon7.addFile(u"logois/x-circle.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.closeMenuBtn.setIcon(icon7)
@@ -383,11 +381,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.Infornation_2 = QLabel(self.widget_8)
         self.Infornation_2.setObjectName(u"Infornation_2")
-        sizePolicy3 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.MinimumExpanding)
-        sizePolicy3.setHorizontalStretch(0)
-        sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.Infornation_2.sizePolicy().hasHeightForWidth())
-        self.Infornation_2.setSizePolicy(sizePolicy3)
+        sizePolicy4 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.MinimumExpanding)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.Infornation_2.sizePolicy().hasHeightForWidth())
+        self.Infornation_2.setSizePolicy(sizePolicy4)
         font2 = QFont()
         font2.setPointSize(13)
         self.Infornation_2.setFont(font2)
@@ -415,11 +413,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_18.setObjectName(u"verticalLayout_18")
         self.label_13 = QLabel(self.widget_9)
         self.label_13.setObjectName(u"label_13")
-        sizePolicy4 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-        sizePolicy4.setHorizontalStretch(0)
-        sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.label_13.sizePolicy().hasHeightForWidth())
-        self.label_13.setSizePolicy(sizePolicy4)
+        sizePolicy3.setHeightForWidth(self.label_13.sizePolicy().hasHeightForWidth())
+        self.label_13.setSizePolicy(sizePolicy3)
         self.label_13.setMinimumSize(QSize(0, 100))
         self.label_13.setMaximumSize(QSize(160, 360))
         self.label_13.setStyleSheet(u"color: rgb(255, 255, 255);")
@@ -441,13 +436,13 @@ class Ui_MainWindow(object):
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
         self.Infornation = QLabel(self.widget)
         self.Infornation.setObjectName(u"Infornation")
-        sizePolicy3.setHeightForWidth(self.Infornation.sizePolicy().hasHeightForWidth())
-        self.Infornation.setSizePolicy(sizePolicy3)
+        sizePolicy4.setHeightForWidth(self.Infornation.sizePolicy().hasHeightForWidth())
+        self.Infornation.setSizePolicy(sizePolicy4)
         self.Infornation.setFont(font2)
         self.Infornation.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.Infornation.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
-        self.horizontalLayout_8.addWidget(self.Infornation)
+        self.horizontalLayout_8.addWidget(self.Infornation, 0, Qt.AlignTop)
 
         self.pushButton = QPushButton(self.widget)
         self.pushButton.setObjectName(u"pushButton")
@@ -461,28 +456,46 @@ class Ui_MainWindow(object):
 
         self.widget_4 = QWidget(self.page_2)
         self.widget_4.setObjectName(u"widget_4")
+        sizePolicy5 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Expanding)
+        sizePolicy5.setHorizontalStretch(0)
+        sizePolicy5.setVerticalStretch(0)
+        sizePolicy5.setHeightForWidth(self.widget_4.sizePolicy().hasHeightForWidth())
+        self.widget_4.setSizePolicy(sizePolicy5)
         self.horizontalLayout_9 = QHBoxLayout(self.widget_4)
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
         self.label_10 = QLabel(self.widget_4)
         self.label_10.setObjectName(u"label_10")
-        sizePolicy4.setHeightForWidth(self.label_10.sizePolicy().hasHeightForWidth())
-        self.label_10.setSizePolicy(sizePolicy4)
+        sizePolicy3.setHeightForWidth(self.label_10.sizePolicy().hasHeightForWidth())
+        self.label_10.setSizePolicy(sizePolicy3)
         self.label_10.setMinimumSize(QSize(0, 100))
         self.label_10.setMaximumSize(QSize(160, 360))
         self.label_10.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.label_10.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
 
-        self.horizontalLayout_9.addWidget(self.label_10)
+        self.horizontalLayout_9.addWidget(self.label_10, 0, Qt.AlignTop)
 
 
         self.verticalLayout_8.addWidget(self.widget_4)
 
         self.centerMenuPages.addWidget(self.page_2)
 
-        self.verticalLayout_7.addWidget(self.centerMenuPages)
+        self.verticalLayout_7.addWidget(self.centerMenuPages, 0, Qt.AlignLeft)
 
 
         self.verticalLayout_6.addWidget(self.widget_2)
+
+        self.widget_15 = QWidget(self.centerMenuContainer)
+        self.widget_15.setObjectName(u"widget_15")
+        self.verticalLayout_22 = QVBoxLayout(self.widget_15)
+        self.verticalLayout_22.setObjectName(u"verticalLayout_22")
+        self.label_17 = QLabel(self.widget_15)
+        self.label_17.setObjectName(u"label_17")
+        self.label_17.setStyleSheet(u"color:rgb(255, 255, 255);")
+
+        self.verticalLayout_22.addWidget(self.label_17, 0, Qt.AlignHCenter|Qt.AlignBottom)
+
+
+        self.verticalLayout_6.addWidget(self.widget_15)
 
 
         self.horizontalLayout.addWidget(self.centerMenuContainer, 0, Qt.AlignLeft)
@@ -541,7 +554,6 @@ class Ui_MainWindow(object):
         self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
         self.minusBtn = QPushButton(self.frame_6)
         self.minusBtn.setObjectName(u"minusBtn")
-        self.minusBtn.setCursor(QCursor(Qt.PointingHandCursor))
         icon8 = QIcon()
         icon8.addFile(u"logois/minus.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.minusBtn.setIcon(icon8)
@@ -550,7 +562,6 @@ class Ui_MainWindow(object):
 
         self.restoreBtn = QPushButton(self.frame_6)
         self.restoreBtn.setObjectName(u"restoreBtn")
-        self.restoreBtn.setCursor(QCursor(Qt.PointingHandCursor))
         icon9 = QIcon()
         icon9.addFile(u"logois/square.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.restoreBtn.setIcon(icon9)
@@ -559,7 +570,6 @@ class Ui_MainWindow(object):
 
         self.exitBtn = QPushButton(self.frame_6)
         self.exitBtn.setObjectName(u"exitBtn")
-        self.exitBtn.setCursor(QCursor(Qt.PointingHandCursor))
         icon10 = QIcon()
         icon10.addFile(u"logois/x.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.exitBtn.setIcon(icon10)
@@ -575,11 +585,11 @@ class Ui_MainWindow(object):
 
         self.widget_3 = QWidget(self.mainBodyContainer)
         self.widget_3.setObjectName(u"widget_3")
-        sizePolicy5 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
-        sizePolicy5.setHorizontalStretch(0)
-        sizePolicy5.setVerticalStretch(0)
-        sizePolicy5.setHeightForWidth(self.widget_3.sizePolicy().hasHeightForWidth())
-        self.widget_3.setSizePolicy(sizePolicy5)
+        sizePolicy6 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
+        sizePolicy6.setHorizontalStretch(0)
+        sizePolicy6.setVerticalStretch(0)
+        sizePolicy6.setHeightForWidth(self.widget_3.sizePolicy().hasHeightForWidth())
+        self.widget_3.setSizePolicy(sizePolicy6)
         self.widget_3.setToolTipDuration(0)
         self.verticalLayout_15 = QVBoxLayout(self.widget_3)
         self.verticalLayout_15.setObjectName(u"verticalLayout_15")
@@ -590,144 +600,52 @@ class Ui_MainWindow(object):
         self.verticalLayout_11.setObjectName(u"verticalLayout_11")
         self.mainPages = QCustomStackedWidget(self.mainMenu)
         self.mainPages.setObjectName(u"mainPages")
-        self.page_8 = QWidget()
-        self.page_8.setObjectName(u"page_8")
-        self.verticalLayout_14 = QVBoxLayout(self.page_8)
-        self.verticalLayout_14.setObjectName(u"verticalLayout_14")
-        self.widget_11 = QWidget(self.page_8)
-        self.widget_11.setObjectName(u"widget_11")
-        self.verticalLayout_20 = QVBoxLayout(self.widget_11)
-        self.verticalLayout_20.setSpacing(5)
-        self.verticalLayout_20.setObjectName(u"verticalLayout_20")
-        self.verticalLayout_20.setContentsMargins(0, -1, -1, 0)
-        self.label_8 = QLabel(self.widget_11)
-        self.label_8.setObjectName(u"label_8")
+        self.page_3 = QWidget()
+        self.page_3.setObjectName(u"page_3")
+        self.verticalLayout_10 = QVBoxLayout(self.page_3)
+        self.verticalLayout_10.setObjectName(u"verticalLayout_10")
+        self.widget_10 = QWidget(self.page_3)
+        self.widget_10.setObjectName(u"widget_10")
+        self.verticalLayout_19 = QVBoxLayout(self.widget_10)
+        self.verticalLayout_19.setObjectName(u"verticalLayout_19")
+        self.label_2 = QLabel(self.widget_10)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setMaximumSize(QSize(350, 350))
+        self.label_2.setPixmap(QPixmap(u"unnamed.png"))
+        self.label_2.setScaledContents(True)
+
+        self.verticalLayout_19.addWidget(self.label_2, 0, Qt.AlignHCenter)
+
+        self.label_14 = QLabel(self.widget_10)
+        self.label_14.setObjectName(u"label_14")
+        self.label_14.setStyleSheet(u"color: rgb(255, 255, 255);")
+
+        self.verticalLayout_19.addWidget(self.label_14, 0, Qt.AlignHCenter|Qt.AlignTop)
+
+        self.label_5 = QLabel(self.widget_10)
+        self.label_5.setObjectName(u"label_5")
         font4 = QFont()
-        font4.setPointSize(35)
-        self.label_8.setFont(font4)
-        self.label_8.setStyleSheet(u"color: rgb(255, 255, 255);")
-        self.label_8.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        font4.setFamily(u"Corbel")
+        font4.setPointSize(30)
+        font4.setBold(True)
+        font4.setWeight(75)
+        self.label_5.setFont(font4)
+        self.label_5.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"\n"
+"")
 
-        self.verticalLayout_20.addWidget(self.label_8)
+        self.verticalLayout_19.addWidget(self.label_5, 0, Qt.AlignHCenter|Qt.AlignTop)
 
-        self.label_15 = QLabel(self.widget_11)
-        self.label_15.setObjectName(u"label_15")
-        self.label_15.setMinimumSize(QSize(400, 40))
-        font5 = QFont()
-        font5.setPointSize(10)
-        self.label_15.setFont(font5)
-        self.label_15.setStyleSheet(u"color: rgb(255, 255, 255);")
-        self.label_15.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+        self.clock = QLabel(self.widget_10)
+        self.clock.setObjectName(u"clock")
+        self.clock.setStyleSheet(u"color: rgb(255, 255, 255);")
 
-        self.verticalLayout_20.addWidget(self.label_15)
-
-        self.textEdit_2 = QTextEdit(self.widget_11)
-        self.textEdit_2.setObjectName(u"textEdit_2")
-        sizePolicy6 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
-        sizePolicy6.setHorizontalStretch(0)
-        sizePolicy6.setVerticalStretch(0)
-        sizePolicy6.setHeightForWidth(self.textEdit_2.sizePolicy().hasHeightForWidth())
-        self.textEdit_2.setSizePolicy(sizePolicy6)
-        self.textEdit_2.setMinimumSize(QSize(0, 35))
-        self.textEdit_2.setMaximumSize(QSize(16777215, 34))
-        font6 = QFont()
-        font6.setPointSize(9)
-        self.textEdit_2.setFont(font6)
-        self.textEdit_2.setStyleSheet(u"color:rgb(255, 255, 255);\n"
-"background-color:#2c313c;\n"
-"text-align:left;\n"
-"padding:5px 10px;\n"
-"border-top-left-radius:5px;\n"
-"border-bottom-left-radius:5px;\n"
-"border-top-right-radius:5px;\n"
-"border-bottom-right-radius:5px;")
-
-        self.verticalLayout_20.addWidget(self.textEdit_2)
-
-        self.pushButton_4 = QPushButton(self.widget_11)
-        self.pushButton_4.setObjectName(u"pushButton_4")
-        self.pushButton_4.setCursor(QCursor(Qt.PointingHandCursor))
-        self.pushButton_4.setLayoutDirection(Qt.RightToLeft)
-        self.pushButton_4.setAutoFillBackground(False)
-        self.pushButton_4.setStyleSheet(u"color:rgb(255, 255, 255);")
-        icon11 = QIcon()
-        icon11.addFile(u"logois/download.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_4.setIcon(icon11)
-
-        self.verticalLayout_20.addWidget(self.pushButton_4, 0, Qt.AlignRight)
-
-        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.verticalLayout_20.addItem(self.verticalSpacer_3)
+        self.verticalLayout_19.addWidget(self.clock, 0, Qt.AlignHCenter|Qt.AlignTop)
 
 
-        self.verticalLayout_14.addWidget(self.widget_11)
+        self.verticalLayout_10.addWidget(self.widget_10)
 
-        self.widget_12 = QWidget(self.page_8)
-        self.widget_12.setObjectName(u"widget_12")
-        self.horizontalLayout_13 = QHBoxLayout(self.widget_12)
-        self.horizontalLayout_13.setSpacing(9)
-        self.horizontalLayout_13.setObjectName(u"horizontalLayout_13")
-        self.widget_13 = QWidget(self.widget_12)
-        self.widget_13.setObjectName(u"widget_13")
-        self.horizontalLayout_14 = QHBoxLayout(self.widget_13)
-        self.horizontalLayout_14.setObjectName(u"horizontalLayout_14")
-        self.horizontalSpacer_2 = QSpacerItem(150, 20, QSizePolicy.Preferred, QSizePolicy.Minimum)
-
-        self.horizontalLayout_14.addItem(self.horizontalSpacer_2)
-
-        self.frame_9 = QFrame(self.widget_13)
-        self.frame_9.setObjectName(u"frame_9")
-        self.frame_9.setFrameShape(QFrame.StyledPanel)
-        self.frame_9.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_15 = QHBoxLayout(self.frame_9)
-        self.horizontalLayout_15.setSpacing(8)
-        self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
-        self.label_16 = QLabel(self.frame_9)
-        self.label_16.setObjectName(u"label_16")
-        sizePolicy7 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
-        sizePolicy7.setHorizontalStretch(0)
-        sizePolicy7.setVerticalStretch(0)
-        sizePolicy7.setHeightForWidth(self.label_16.sizePolicy().hasHeightForWidth())
-        self.label_16.setSizePolicy(sizePolicy7)
-        self.label_16.setMaximumSize(QSize(235, 224))
-        self.label_16.setPixmap(QPixmap(u"musical-note-portable-network-graphics-computer-icons-clip-art-png-favpng-nzc8dcUd1hT9ETrZQV5C1LbUv.png"))
-        self.label_16.setScaledContents(True)
-
-        self.horizontalLayout_15.addWidget(self.label_16, 0, Qt.AlignRight)
-
-
-        self.horizontalLayout_14.addWidget(self.frame_9)
-
-
-        self.horizontalLayout_13.addWidget(self.widget_13)
-
-
-        self.verticalLayout_14.addWidget(self.widget_12)
-
-        self.mainPages.addWidget(self.page_8)
-        self.page_7 = QWidget()
-        self.page_7.setObjectName(u"page_7")
-        self.verticalLayout_13 = QVBoxLayout(self.page_7)
-        self.verticalLayout_13.setObjectName(u"verticalLayout_13")
-        self.widget_14 = QWidget(self.page_7)
-        self.widget_14.setObjectName(u"widget_14")
-        self.verticalLayout_21 = QVBoxLayout(self.widget_14)
-        self.verticalLayout_21.setObjectName(u"verticalLayout_21")
-        self.label_7 = QLabel(self.widget_14)
-        self.label_7.setObjectName(u"label_7")
-        font7 = QFont()
-        font7.setPointSize(30)
-        self.label_7.setFont(font7)
-        self.label_7.setStyleSheet(u"color: rgb(255, 255, 255);")
-        self.label_7.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
-
-        self.verticalLayout_21.addWidget(self.label_7, 0, Qt.AlignHCenter|Qt.AlignTop)
-
-
-        self.verticalLayout_13.addWidget(self.widget_14)
-
-        self.mainPages.addWidget(self.page_7)
+        self.mainPages.addWidget(self.page_3)
         self.page_4 = QWidget()
         self.page_4.setObjectName(u"page_4")
         self.verticalLayout_12 = QVBoxLayout(self.page_4)
@@ -740,7 +658,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_16.setContentsMargins(0, -1, -1, 0)
         self.label_6 = QLabel(self.widget_5)
         self.label_6.setObjectName(u"label_6")
-        self.label_6.setFont(font4)
+        font5 = QFont()
+        font5.setPointSize(35)
+        self.label_6.setFont(font5)
         self.label_6.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.label_6.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
@@ -749,7 +669,9 @@ class Ui_MainWindow(object):
         self.label_11 = QLabel(self.widget_5)
         self.label_11.setObjectName(u"label_11")
         self.label_11.setMinimumSize(QSize(400, 40))
-        self.label_11.setFont(font5)
+        font6 = QFont()
+        font6.setPointSize(10)
+        self.label_11.setFont(font6)
         self.label_11.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.label_11.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
 
@@ -757,11 +679,16 @@ class Ui_MainWindow(object):
 
         self.textEdit = QTextEdit(self.widget_5)
         self.textEdit.setObjectName(u"textEdit")
-        sizePolicy6.setHeightForWidth(self.textEdit.sizePolicy().hasHeightForWidth())
-        self.textEdit.setSizePolicy(sizePolicy6)
+        sizePolicy7 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        sizePolicy7.setHorizontalStretch(0)
+        sizePolicy7.setVerticalStretch(0)
+        sizePolicy7.setHeightForWidth(self.textEdit.sizePolicy().hasHeightForWidth())
+        self.textEdit.setSizePolicy(sizePolicy7)
         self.textEdit.setMinimumSize(QSize(0, 35))
         self.textEdit.setMaximumSize(QSize(16777215, 34))
-        self.textEdit.setFont(font6)
+        font7 = QFont()
+        font7.setPointSize(9)
+        self.textEdit.setFont(font7)
         self.textEdit.setStyleSheet(u"color:rgb(255, 255, 255);\n"
 "background-color:#2c313c;\n"
 "text-align:left;\n"
@@ -775,10 +702,11 @@ class Ui_MainWindow(object):
 
         self.pushButton_2 = QPushButton(self.widget_5)
         self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_2.setLayoutDirection(Qt.RightToLeft)
         self.pushButton_2.setAutoFillBackground(False)
         self.pushButton_2.setStyleSheet(u"color:rgb(255, 255, 255);")
+        icon11 = QIcon()
+        icon11.addFile(u"logois/download.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_2.setIcon(icon11)
 
         self.verticalLayout_16.addWidget(self.pushButton_2, 0, Qt.AlignRight)
@@ -812,8 +740,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout_12.setObjectName(u"horizontalLayout_12")
         self.label_12 = QLabel(self.frame_8)
         self.label_12.setObjectName(u"label_12")
-        sizePolicy7.setHeightForWidth(self.label_12.sizePolicy().hasHeightForWidth())
-        self.label_12.setSizePolicy(sizePolicy7)
+        sizePolicy8 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        sizePolicy8.setHorizontalStretch(0)
+        sizePolicy8.setVerticalStretch(0)
+        sizePolicy8.setHeightForWidth(self.label_12.sizePolicy().hasHeightForWidth())
+        self.label_12.setSizePolicy(sizePolicy8)
         self.label_12.setPixmap(QPixmap(u"PngItem_200678.png"))
         self.label_12.setScaledContents(True)
 
@@ -829,52 +760,129 @@ class Ui_MainWindow(object):
         self.verticalLayout_12.addWidget(self.widget_6)
 
         self.mainPages.addWidget(self.page_4)
-        self.page_3 = QWidget()
-        self.page_3.setObjectName(u"page_3")
-        self.verticalLayout_10 = QVBoxLayout(self.page_3)
-        self.verticalLayout_10.setObjectName(u"verticalLayout_10")
-        self.widget_10 = QWidget(self.page_3)
-        self.widget_10.setObjectName(u"widget_10")
-        self.verticalLayout_19 = QVBoxLayout(self.widget_10)
-        self.verticalLayout_19.setObjectName(u"verticalLayout_19")
-        self.label_2 = QLabel(self.widget_10)
-        self.label_2.setObjectName(u"label_2")
-        self.label_2.setMaximumSize(QSize(350, 350))
-        self.label_2.setPixmap(QPixmap(u"unnamed.png"))
-        self.label_2.setScaledContents(True)
-
-        self.verticalLayout_19.addWidget(self.label_2, 0, Qt.AlignHCenter)
-
-        self.label_14 = QLabel(self.widget_10)
-        self.label_14.setObjectName(u"label_14")
-        self.label_14.setStyleSheet(u"color: rgb(255, 255, 255);")
-
-        self.verticalLayout_19.addWidget(self.label_14, 0, Qt.AlignHCenter|Qt.AlignTop)
-
-        self.label_5 = QLabel(self.widget_10)
-        self.label_5.setObjectName(u"label_5")
+        self.page_7 = QWidget()
+        self.page_7.setObjectName(u"page_7")
+        self.verticalLayout_13 = QVBoxLayout(self.page_7)
+        self.verticalLayout_13.setObjectName(u"verticalLayout_13")
+        self.widget_14 = QWidget(self.page_7)
+        self.widget_14.setObjectName(u"widget_14")
+        self.verticalLayout_21 = QVBoxLayout(self.widget_14)
+        self.verticalLayout_21.setObjectName(u"verticalLayout_21")
+        self.label_7 = QLabel(self.widget_14)
+        self.label_7.setObjectName(u"label_7")
         font8 = QFont()
-        font8.setFamily(u"Corbel")
         font8.setPointSize(30)
-        font8.setBold(True)
-        font8.setWeight(75)
-        self.label_5.setFont(font8)
-        self.label_5.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-"\n"
-"")
+        self.label_7.setFont(font8)
+        self.label_7.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.label_7.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
 
-        self.verticalLayout_19.addWidget(self.label_5, 0, Qt.AlignHCenter|Qt.AlignTop)
-
-        self.clock = QLabel(self.widget_10)
-        self.clock.setObjectName(u"clock")
-        self.clock.setStyleSheet(u"color: rgb(255, 255, 255);")
-
-        self.verticalLayout_19.addWidget(self.clock, 0, Qt.AlignHCenter|Qt.AlignTop)
+        self.verticalLayout_21.addWidget(self.label_7, 0, Qt.AlignHCenter)
 
 
-        self.verticalLayout_10.addWidget(self.widget_10)
+        self.verticalLayout_13.addWidget(self.widget_14)
 
-        self.mainPages.addWidget(self.page_3)
+        self.mainPages.addWidget(self.page_7)
+        self.page_8 = QWidget()
+        self.page_8.setObjectName(u"page_8")
+        self.verticalLayout_14 = QVBoxLayout(self.page_8)
+        self.verticalLayout_14.setObjectName(u"verticalLayout_14")
+        self.widget_11 = QWidget(self.page_8)
+        self.widget_11.setObjectName(u"widget_11")
+        self.verticalLayout_20 = QVBoxLayout(self.widget_11)
+        self.verticalLayout_20.setSpacing(5)
+        self.verticalLayout_20.setObjectName(u"verticalLayout_20")
+        self.verticalLayout_20.setContentsMargins(0, -1, -1, 0)
+        self.label_8 = QLabel(self.widget_11)
+        self.label_8.setObjectName(u"label_8")
+        self.label_8.setFont(font5)
+        self.label_8.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.label_8.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.verticalLayout_20.addWidget(self.label_8)
+
+        self.label_15 = QLabel(self.widget_11)
+        self.label_15.setObjectName(u"label_15")
+        self.label_15.setMinimumSize(QSize(400, 40))
+        self.label_15.setFont(font6)
+        self.label_15.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.label_15.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+
+        self.verticalLayout_20.addWidget(self.label_15)
+
+        self.textEdit_2 = QTextEdit(self.widget_11)
+        self.textEdit_2.setObjectName(u"textEdit_2")
+        sizePolicy7.setHeightForWidth(self.textEdit_2.sizePolicy().hasHeightForWidth())
+        self.textEdit_2.setSizePolicy(sizePolicy7)
+        self.textEdit_2.setMinimumSize(QSize(0, 35))
+        self.textEdit_2.setMaximumSize(QSize(16777215, 34))
+        self.textEdit_2.setFont(font7)
+        self.textEdit_2.setStyleSheet(u"color:rgb(255, 255, 255);\n"
+"background-color:#2c313c;\n"
+"text-align:left;\n"
+"padding:5px 10px;\n"
+"border-top-left-radius:5px;\n"
+"border-bottom-left-radius:5px;\n"
+"border-top-right-radius:5px;\n"
+"border-bottom-right-radius:5px;")
+
+        self.verticalLayout_20.addWidget(self.textEdit_2)
+
+        self.pushButton_4 = QPushButton(self.widget_11)
+        self.pushButton_4.setObjectName(u"pushButton_4")
+        self.pushButton_4.setLayoutDirection(Qt.RightToLeft)
+        self.pushButton_4.setAutoFillBackground(False)
+        self.pushButton_4.setStyleSheet(u"color:rgb(255, 255, 255);")
+        self.pushButton_4.setIcon(icon11)
+
+        self.verticalLayout_20.addWidget(self.pushButton_4, 0, Qt.AlignRight)
+
+        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_20.addItem(self.verticalSpacer_3)
+
+
+        self.verticalLayout_14.addWidget(self.widget_11)
+
+        self.widget_12 = QWidget(self.page_8)
+        self.widget_12.setObjectName(u"widget_12")
+        self.horizontalLayout_13 = QHBoxLayout(self.widget_12)
+        self.horizontalLayout_13.setSpacing(9)
+        self.horizontalLayout_13.setObjectName(u"horizontalLayout_13")
+        self.widget_13 = QWidget(self.widget_12)
+        self.widget_13.setObjectName(u"widget_13")
+        self.horizontalLayout_14 = QHBoxLayout(self.widget_13)
+        self.horizontalLayout_14.setObjectName(u"horizontalLayout_14")
+        self.horizontalSpacer_2 = QSpacerItem(150, 20, QSizePolicy.Preferred, QSizePolicy.Minimum)
+
+        self.horizontalLayout_14.addItem(self.horizontalSpacer_2)
+
+        self.frame_9 = QFrame(self.widget_13)
+        self.frame_9.setObjectName(u"frame_9")
+        self.frame_9.setFrameShape(QFrame.StyledPanel)
+        self.frame_9.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_15 = QHBoxLayout(self.frame_9)
+        self.horizontalLayout_15.setSpacing(8)
+        self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
+        self.label_16 = QLabel(self.frame_9)
+        self.label_16.setObjectName(u"label_16")
+        sizePolicy8.setHeightForWidth(self.label_16.sizePolicy().hasHeightForWidth())
+        self.label_16.setSizePolicy(sizePolicy8)
+        self.label_16.setMaximumSize(QSize(235, 224))
+        self.label_16.setPixmap(QPixmap(u"musical-note-portable-network-graphics-computer-icons-clip-art-png-favpng-nzc8dcUd1hT9ETrZQV5C1LbUv.png"))
+        self.label_16.setScaledContents(True)
+
+        self.horizontalLayout_15.addWidget(self.label_16, 0, Qt.AlignRight)
+
+
+        self.horizontalLayout_14.addWidget(self.frame_9)
+
+
+        self.horizontalLayout_13.addWidget(self.widget_13)
+
+
+        self.verticalLayout_14.addWidget(self.widget_12)
+
+        self.mainPages.addWidget(self.page_8)
 
         self.verticalLayout_11.addWidget(self.mainPages)
 
@@ -922,8 +930,8 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.centerMenuPages.setCurrentIndex(0)
-        self.mainPages.setCurrentIndex(1)
+        self.centerMenuPages.setCurrentIndex(1)
+        self.mainPages.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -966,28 +974,20 @@ class Ui_MainWindow(object):
         self.closeMenuBtn.setText("")
         self.Infornation_2.setText(QCoreApplication.translate("MainWindow", u"Help", None))
         self.pushButton_3.setText("")
-        self.label_13.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><br/>To use this app properly you </p><p>should to copy all the url from</p><p>only youtube.</p><p><br/></p><p>(It's only works from youtube links</p><p>and downloads the file in mp4 at</p><p>the max resolution. If you want</p><p>other format use the convertor</p><p>tool)</p></body></html>", None))
+        self.label_13.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><br/>To use this app properly you </p><p>should to copy all the url from</p><p>only youtube.</p><p><br/></p><p>(It's only works from youtube</p><p>links and downloads the file in</p><p>mp4 at the max resolution. If </p><p>you want other format use the </p><p>convertor tool)</p><p><br/></p><p>The Converter tool only works</p><p>with video formats and image</p><p>formats</p></body></html>", None))
         self.Infornation.setText(QCoreApplication.translate("MainWindow", u"Information", None))
         self.pushButton.setText("")
-        self.label_10.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><br/>Wellcome to my App! This app</p><p>was made 100% in python. It's</p><p>was developed for my Pi project.</p><p>I hope this app help you!</p><p><br/></p><p>(All copyright rights remain to the</p><p>creator)</p></body></html>", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><br/>Wellcome to my App! This app</p><p>was made 100% in python. It's</p><p>was developed for my Pi project.</p><p>I hope this app help you!</p><p><br/></p><p>(Licensed by GNU)</p></body></html>", None))
+        self.label_17.setText(QCoreApplication.translate("MainWindow", u"GitHub Repository Link", None))
         self.label_3.setText("")
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"MyCat Downloader", None))
         self.minusBtn.setText("")
         self.restoreBtn.setText("")
         self.exitBtn.setText("")
-        self.label_8.setText(QCoreApplication.translate("MainWindow", u"Music Downloader", None))
-        self.label_15.setText(QCoreApplication.translate("MainWindow", u"Insert your Youtube Url! (It will only download a mp3 file)", None))
-        self.textEdit_2.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Youtube Url</p></body></html>", None))
-#if QT_CONFIG(tooltip)
-        self.pushButton_4.setToolTip(QCoreApplication.translate("MainWindow", u"Download to mp4 your Video!", None))
-#endif // QT_CONFIG(tooltip)
-        self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"Download", None))
-        self.label_16.setText("")
-        self.label_7.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" vertical-align:super;\">Converter</span></p></body></html>", None))
+        self.label_2.setText("")
+        self.label_14.setText(QCoreApplication.translate("MainWindow", u"_______________________________________________________________________", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"HOME PAGE", None))
+        self.clock.setText("")
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"Youtube Downloader", None))
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"Insert your Youtube Url!", None))
         self.textEdit.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
@@ -1000,10 +1000,19 @@ class Ui_MainWindow(object):
 #endif // QT_CONFIG(tooltip)
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Download", None))
         self.label_12.setText("")
-        self.label_2.setText("")
-        self.label_14.setText(QCoreApplication.translate("MainWindow", u"_______________________________________________________________________", None))
-        self.label_5.setText(QCoreApplication.translate("MainWindow", u"HOME PAGE", None))
-        self.clock.setText("")
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" vertical-align:super;\">Converter</span></p></body></html>", None))
+        self.label_8.setText(QCoreApplication.translate("MainWindow", u"Music Downloader", None))
+        self.label_15.setText(QCoreApplication.translate("MainWindow", u"Insert your Youtube Url! (It will only download a mp3 file)", None))
+        self.textEdit_2.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Youtube Url</p></body></html>", None))
+#if QT_CONFIG(tooltip)
+        self.pushButton_4.setToolTip(QCoreApplication.translate("MainWindow", u"Download to mp4 your Video!", None))
+#endif // QT_CONFIG(tooltip)
+        self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"Download", None))
+        self.label_16.setText("")
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Made By: MiguelDeHaroce", None))
     # retranslateUi
 

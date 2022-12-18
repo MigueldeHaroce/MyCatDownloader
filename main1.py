@@ -284,14 +284,15 @@ class MainWindow1(QMainWindow):
                         result.write_videofile(pathOnly + output, codec='mpeg4')
                         self.ui.label_to_change.setText(QCoreApplication.translate("Mainwindow", u"Done!", None))
                     else:
-                        self.ui.label_to_change.setText(QCoreApplication.translate("Mainwindow", u"ERROR!", None))
+                        self.ui.label_to_change.setText(QCoreApplication.translate("Mainwindow", u"Same format!", None))
+                        self.ui.label_to_change1.setText(QCoreApplication.translate("Mainwindow", u"Same format!", None))
 
             elif output == ".webm":
                 if myInput != output:
                     clip = moviepy.VideoFileClip(r"" + myPath)
                     result = moviepy.CompositeVideoClip([clip])
                     result.write_videofile(pathOnly + output, codec='libvpx')
-                    self.ui.label_to_change.setText(QCoreApplication.translate("Mainwindow", u"Same format!", None))
+                    self.ui.label_to_change.setText(QCoreApplication.translate("Mainwindow", u"Done!", None))
             else:
                 self.ui.label_to_change.setText(QCoreApplication.translate("Mainwindow", u"ERROR!", None))
 
@@ -304,8 +305,10 @@ class MainWindow1(QMainWindow):
                     self.ui.label_to_change1.setText(QCoreApplication.translate("Mainwindow", u"Done!", None))
                 else:
                     self.ui.label_to_change1.setText(QCoreApplication.translate("Mainwindow", u"Same format!", None))
+                    self.ui.label_to_change.setText(QCoreApplication.translate("Mainwindow", u"Same format!", None))
             else:
                 self.ui.label_to_change1.setText(QCoreApplication.translate("Mainwindow", u"ERROR!", None))
+                self.ui.label_to_change.setText(QCoreApplication.translate("Mainwindow", u"ERROR!", None))
         else:
             self.ui.label_to_change.setText(QCoreApplication.translate("Mainwindow", u"ERROR!", None))
             self.ui.label_to_change1.setText(QCoreApplication.translate("Mainwindow", u"ERROR!", None))
