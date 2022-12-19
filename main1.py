@@ -295,6 +295,7 @@ class MainWindow1(QMainWindow):
                     self.ui.label_to_change.setText(QCoreApplication.translate("Mainwindow", u"Done!", None))
             else:
                 self.ui.label_to_change.setText(QCoreApplication.translate("Mainwindow", u"ERROR!", None))
+                self.ui.label_to_change1.setText(QCoreApplication.translate("Mainwindow", u"ERROR!", None))
 
         elif myInput == ".png" or myInput == ".jpg" or myInput == ".jpeg" or myInput == ".webp" or myInput == ".tiff":
             if output == ".png" or output == ".jpg" or output == ".jpeg" or output == ".webp" or output == ".tiff":
