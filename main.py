@@ -130,6 +130,9 @@ class MainWindow(QMainWindow):
         self.ui.pushButton_2.clicked.connect(self.clickedDownload)
         self.ui.pushButton_4.clicked.connect(self.clickedDownloadM)
 
+        linkTemplate = '<a href={0}>{1}</a>'
+        self.ui.label_18 = QTextBrowser()
+        self.ui.label_18.setOpenExternalLinks(True)
         timer = QTimer(self)
 
         # adding action to timer
