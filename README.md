@@ -1,6 +1,6 @@
 # Pi2022
 
-Hello! This app Download videos from Youtube, in .mp4 and .mp3! Also this app it's a conversion tool that let you convert videos formats and image formats!
+Hello! This app Download videos from Youtube, in .mp4 and .mp3! Also this app it's a conversion tool that let you convert videos formats and image formats! In the next days I'm going to upload a setup file.
 
 ![Screenshot 2022-12-22 202440](https://user-images.githubusercontent.com/106353927/209211372-e8de9447-0172-42ad-ad7b-1ad1851036c0.png)
 ![Screenshot 2022-12-22 202519](https://user-images.githubusercontent.com/106353927/209211383-21c8950b-f859-4980-b65d-63a0b67ddbd7.png)
