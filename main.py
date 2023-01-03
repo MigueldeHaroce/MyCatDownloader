@@ -83,6 +83,12 @@ class dragEffect(QtWidgets.QLabel, QMainWindow):
         else:
             e.ignore()
 
+class HyperlinkLabel(QLabel):
+    def __init__(self):
+        super().__init__()
+        self.setStyleSheet('font-size: 35px')
+        self.setOpenExternalLinks(True)
+
 
 class MainWindow(QMainWindow):
 
@@ -91,21 +97,21 @@ class MainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-        self.ui.label_17 = dragEffect("label_17")
-        self.ui.label_17.setObjectName(u"label_17")
+        self.ui.label_18 = dragEffect("label_17")
+        self.ui.label_18.setObjectName(u"label_17")
         font8 = QFont()
         font8.setPointSize(12)
-        self.ui.label_17.setFont(font8)
-        self.ui.label_17.setStyleSheet(u"border: 2px dashed #fff;\n"
+        self.ui.label_18.setFont(font8)
+        self.ui.label_18.setStyleSheet(u"border: 2px dashed #fff;\n"
                                     "color: rgb(255, 255, 255);\n"
                                     "background-color: #2c313c\n"
         )
-        self.ui.label_17.setAlignment(Qt.AlignCenter)
-        self.ui.label_17.setText(QCoreApplication.translate("MainWindow", u"Drag your File Here!", None))
-        self.ui.label_17.setSizePolicy(
+        self.ui.label_18.setAlignment(Qt.AlignCenter)
+        self.ui.label_18.setText(QCoreApplication.translate("MainWindow", u"Drag your File Here!", None))
+        self.ui.label_18.setSizePolicy(
             QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding
         )
-        self.ui.verticalLayout_21.addWidget(self.ui.label_17)
+        self.ui.verticalLayout_21.addWidget(self.ui.label_18)
 
 
 
@@ -131,8 +137,8 @@ class MainWindow(QMainWindow):
         self.ui.pushButton_4.clicked.connect(self.clickedDownloadM)
 
         linkTemplate = '<a href={0}>{1}</a>'
-        self.ui.label_18 = QTextBrowser()
-        self.ui.label_18.setOpenExternalLinks(True)
+        self.ui.label_17 = HyperlinkLabel()
+        self.ui.label_17.setText(linkTemplate.format('https://Google.com', 'Google.com'))
         timer = QTimer(self)
 
         # adding action to timer
