@@ -43,8 +43,6 @@ class dragEffect(QtWidgets.QLabel, QMainWindow):
         if e.mimeData().hasUrls():
             e.accept()
             file_path = e.mimeData().urls()[0].toLocalFile()
-            #print(file_path)
-            #detect(file_path, ".mkv")
             formats = [".mp4",
                        ".avi",
                        ".mkv",
