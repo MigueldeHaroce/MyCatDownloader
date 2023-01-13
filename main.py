@@ -23,6 +23,7 @@ import sys
 output = open("output.txt", "wt")
 sys.stdout = output
 sys.stderr = output
+
 class dragEffect(QtWidgets.QLabel, QMainWindow):
     def __init__(self, *args, **kwargs):
         QMainWindow.__init__(self)
